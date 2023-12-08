@@ -1,0 +1,1191 @@
+@import (less) "./themes/assets/assets.less";
+@import url("https://fonts.cdnfonts.com/css/friz-quadrata");
+@import url("https://fonts.cdnfonts.com/css/adobe-garamond-pro-2");
+@import url('https://fonts.cdnfonts.com/css/joan-2');
+@import url('https://fonts.cdnfonts.com/css/minion-pro');
+
+:root {
+  //Colors
+  --HB_Color_Accent: #ebcec3; // Salmon
+  --HB_Color_Footnotes: #5c5c5c; // Dark gray
+  --HB_Color_Soulbound_Gold: #806b39; // Dark Gold
+}
+
+/* Removes Small-Caps in first line */
+.page h1 + p:first-line {
+  all: unset;
+}
+
+/* ////// PAGE GENERAL START ////// */
+
+.page {
+
+  &:has(.frontCover.module) img {
+    z-index: -2;
+  }
+
+  & .frontCover {
+      content: ' ';
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181172818721902622/Soulbound.png);
+      background-size: 550px 206px;
+      width: 550px;
+      height: 206px;
+      top: 15px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      
+      &.module {
+        &::before {
+          content: ' ';
+          background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181372137232154635/Through_Fire__Smoke-1Xa.png);
+          background-size: contain;
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height: 426px;
+          z-index: -1;
+          margin: auto;
+        }
+        
+        &::after {
+          content: ' ';
+          background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181372138322657312/Through_Fire__Smoke-1Xb.png);
+          background-size: contain;
+          position:absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 203px;
+          z-index: -1;
+        }
+      }
+    }
+  &:has(.frontCover) {
+    & h1 {
+      font-family: "Friz Quadrata";
+      margin-bottom: 0.5cm;
+      margin-top: 0;
+      color: #806b39;
+      font-size: 1.9cm;
+      border: none;
+      font-weight: bold;
+      filter: drop-shadow(0 0 1px black);
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      background-image: url(https://runebrush.pa-sy.com/warscroll/image/bg-big.jpg);
+      background-size: 50px 50px;
+    }
+    & h2 {
+      border: none;
+      position: absolute;
+      right: 0;
+      bottom: 1.3cm;
+      left: 0;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      font-family: "Friz Quadrata";
+      font-size: .6cm;
+      color: white;
+      text-align: center;
+      filter: drop-shadow(0 0 1px black);
+      letter-spacing: unset;
+   }
+   
+   &:has(.module) {
+    & h2 {
+      bottom:1.9cm;
+    }
+   }
+  }
+  
+  /* Background Image */
+  background-size: cover;
+  background-repeat: round;
+  
+  &:has(.pageNumber)::after {
+    content: ' ';
+    position: absolute;
+    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178081957796659313/Soulbound_Page_Number_Star.png);
+    background-size: 1.8cm 1.8cm;
+    width: 1.8cm;
+    height: 1.8cm;
+    text-align:center;
+    bottom: 0.2cm;
+  }
+  
+  /* Every 2nd page (even) */
+  &:nth-child(even) {
+    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178049468772397116/Soulbound_Background_Page_R.jpg);
+    
+    /* Page Number placement on even pages */
+    & .pageNumber {
+      left:unset;
+      right: .45cm;
+    }
+    
+    &::after {
+      right: 0.2cm;
+      left:unset;
+    }
+  }
+
+  /* Every 2nd page (odd) */
+  &:nth-child(odd) {
+    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178049468445237258/Soulbound_Page_Background_L.jpg);
+    
+    &::after {
+      left: 0.2cm;
+      right:unset;
+    }
+  }
+  
+  /* General page number rules */
+  & .pageNumber {
+    position: absolute;
+    left: .45cm;
+    bottom: .91cm;
+    width: 50px;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    text-indent: 0;
+  }
+  
+  & .toc {
+    &.wide {
+      width:106%;
+      margin-left: -3%;
+      column-count: 3;
+      column-fill: balance;
+      column-gap: .5cm;
+      column-width: 100px;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      -webkit-column-width: 100px;
+      -moz-column-width: 100px;
+      -webkit-column-gap: .5cm;
+      -moz-column-gap: .5cm;
+    }
+    
+    & h1 {
+      -webkit-column-span: initial;
+      -moz-column-span: initial;
+      margin-bottom: 0.5cm;
+      font-size: 1.1cm;
+      line-height: 1.25cm;
+      border: none;
+      visibility: hidden;
+      line-height: 20px;
+      margin-bottom: 2cm;
+      
+      &::after {
+        display: block;
+        visibility: initial;
+        content: "Contents";
+      }
+    }
+    
+    & h3 {
+      position: relative;
+      margin-bottom: .5cm;
+      
+      &::after {
+        content: ' ';
+        position: absolute;
+        background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181371061342838805/Table_of_Contents_Section_Line_Element.png);
+        background-size: contain;
+        width:92%;
+        height: 15px;
+        transform: translateX(4%);
+      }
+      
+      & span {
+        &:first-child {
+          &::after {
+            content: unset;
+          }
+        }
+        
+        &:has(+span) {
+          width:100%;
+          text-align: center;
+          display: block;
+          color: black;
+          font-size: .52cm;
+          text-transform: uppercase;
+          line-height:1em;
+          font-family: "Friz Quadrata";
+        }
+        
+        &+span {
+          display: none !important;
+        }
+      }
+    }
+    
+    & h4 {
+      color: inherit;
+      font-size: inherit;
+      font-family: "BookInsanityRemake";
+      font-weight: normal;
+      text-transform: none;
+      margin-top: 0;
+    }
+  }
+  
+  &:has(.toc) {
+    & .wide {
+      
+    }
+    
+    /* Hide Page Number on Table of Contents */
+    & .pageNumber {
+      display: none;
+    }
+  }
+
+
+  
+
+
+
+
+  /*TABLES WITHIN NOTES*/
+  .note table tbody tr:nth-child(odd) {
+    background: #fff;
+  }
+
+  /* Removes Drop Caps */
+  .page h1 + p:first-letter {
+    all: unset;
+  }
+
+  /* Removes Drop Caps */
+  & h1 + p:first-letter {
+    all: unset;
+  }
+  
+  & 
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p {
+    margin-top: 0px;
+  }
+
+
+
+  & h1 {
+    font-family: "Friz Quadrata";
+    margin-bottom: 0.5cm;
+    color: #806b39;
+    font-size: 1.7cm;
+    line-height: 1.25cm;
+    border-top: 2px solid #806b39;
+    border-bottom: 2px solid #806b39;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  & h2 {
+    color: #806b39;
+    font-family: "Friz Quadrata";
+    font-size: 0.75cm;
+    border-bottom: 2px solid #806b39;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    + p {
+      margin-top: 5px;
+    }
+  }
+
+  & * + h3 {
+    margin-top: 0.325cm;
+  }
+
+  & h3 {
+    color: #183052;
+    font-size: 0.75cm;
+    border-bottom: none;
+  }
+
+  & h4 {
+    color: #183052;
+    font-size: 0.65cm;
+    border-bottom: none;
+    text-transform:lowercase;
+  }
+  
+  & h5 {
+    font-family: "MrEavesRemake";
+    font-size: 0.50cm;
+    text-transform:lowercase;
+  }
+
+  & p {
+    font-size: .36cm;
+    text-align: justify;
+    font-family: "Adobe Garamond Pro";
+    line-height: .46cm;
+  }
+
+  & p + p::before {
+    content: "\A";
+  }
+
+  & p + p {
+    text-indent: 0em;
+    white-space: pre-wrap;
+  }
+  
+  /* NOTE BLOCK */
+
+  & .note {
+    position: relative;
+    color: #faffff;
+    background-color: black;
+    border-image: none;
+    padding: 0.4cm 0.3cm 0.4cm 0.3cm;
+    border: 3px solid #b5a55f;
+    box-shadow: none;
+    margin-bottom:30px;
+    margin-top: 45px;
+    
+    &::before {
+      position: absolute;
+      content: ' ';
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178060677622026360/Soulbound_Tooltip_Top_v4.png);
+      width: 325px;
+      height: 94px;
+      top: -63px;
+      left: -40px;
+      transform: scale(0.65);
+    }
+    
+    &::after {
+      position: absolute;
+      content: ' ';
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178060677068357642/Soulbound_Tooltip_Bottom_v4.png);
+      width: 325px;
+      height: 94px;
+      bottom: -63px;
+      left: 20px;
+      transform: scale(0.65);
+    }
+
+    & h5 {
+      color: #806b39;
+      margin-top: 0.3cm;
+      margin-bottom: 0.3cm;
+      font-size: 0.5cm;
+      text-align: center;
+    }
+
+    & p {
+      font-size: 0.4cm;
+    }
+  }
+
+  /* ////// TABLE START ////// */
+  & h4:has(+table) {
+      column-span: all;
+      
+      & +table {
+        column-span: all;
+      }
+  }
+    
+  & h5:has(+table) {
+      column-span: none;
+    }
+
+  & h4:has(+table),
+    h5:has(+table) {
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to right, #325277, #2e496c, #2a4062, #263757, #212f4d, #212f4d, #212f4d, #212f4d, #263757, #2a4062, #2e496c, #325277);
+    text-align: center;
+    font-size: 0.45cm;
+    font-weight: 100;
+    letter-spacing: 0.02cm;
+    padding: .3cm .25cm;
+    margin-top: 20px !important;
+    font-family: "MrEavesRemake";
+    text-transform:lowercase;
+    margin-bottom: 0px;
+    border: none;
+    line-height: inherit;
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      display:block;
+      top:-0.51cm;;
+      left:-0.27cm;
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+      background-size: .5cm 1cm;
+      background-repeat: none;
+      width: .5cm;
+      height: 1cm;
+      text-align: center;
+    }
+  
+    &::after {
+      content: ' ';
+      position: absolute;
+      background-repeat: none;
+      top:-0.51cm;;
+      right:-0.23cm;
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+      background-size: .5cm 1cm;
+      width: .5cm;
+      height: 1cm;
+      text-align: center;
+    }
+    
+    & +table {
+      border: 1px solid #806b39;
+      background-image: url(https://i.imgur.com/LibSb9U.jpg);
+      margin-top: 0px;
+      
+      & th,td {
+        padding: 10px 5px;
+        vertical-align: middle;
+      }
+      
+      & th:not(:last-child) {
+        border-right: 1px solid #806b39;
+      }
+      
+      & td {
+        border-top: 1px solid #806b39;
+        background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+      }
+      
+      & tr:nth-child(even) td {
+        background-image: url(https://i.imgur.com/LibSb9U.jpg); 
+      }
+      
+      
+      
+      & td:not(:last-child) {
+        border-right: 1px solid #806b39;
+      }
+    }
+  }
+
+  /* ////// STAT BLOCK START ////// */
+
+  & .monster.frame::before {
+    content: ' ';
+    position: absolute;
+    top:-0.51cm;;
+    left:-0.27cm;
+    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+    background-size: .5cm 1cm;
+    width: .5cm;
+    height: 1cm;
+    text-align: center;
+  }
+  
+  & .monster.frame::after {
+    content: ' ';
+    position: absolute;
+    top:-0.51cm;;
+    right:-0.27cm;
+    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+    background-size: .5cm 1cm;
+    width: .5cm;
+    height: 1cm;
+    text-align: center;
+  }
+  
+  & .monster.frame {
+  & table:first-of-type {
+    & th {
+      line-height:30px;
+    }
+  }
+  
+  & table:first-of-type th:nth-child(1)::before {
+    content: ' ';
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077553664204831/Soulbound_Melee_Symbol.png');
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    }
+  & table:first-of-type th:nth-child(2)::before {
+    content: ' ';
+    position: absolute;
+    top: 63px;
+    left: 125px;
+    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077553278332988/Soulbound_Accuracy_Symbol.png');
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    }
+  & table:first-of-type th:nth-child(3)::before {
+    content: ' ';
+    position: absolute;
+    top: 65px;
+    left: 235px;
+    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077552946991124/Soulbound_Defence_Symbol.png');
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    }
+  }
+
+  & .monster.frame {
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    border: 1px solid #806b39;
+    margin-top: 20px;
+    
+    
+    & p {
+      text-align: left;
+    }
+    
+    & p, th, td {
+      font-family: 'Minion Pro';
+      font-size: 0.35cm;
+      letter-spacing: 0.006cm;
+      vertical-align:middle;
+    }
+    
+    & .block {
+      margin-top:0;
+    }
+    
+    & h4 {
+      color: white;
+      background-image: linear-gradient(to right, #325277, #2e496c, #2a4062, #263757, #212f4d, #212f4d, #212f4d, #212f4d, #263757, #2a4062, #2e496c, #325277);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.45cm;
+      font-weight: 100;
+      letter-spacing: 0.02cm;
+      padding: .2cm .25cm .2cm .25cm
+      
+    }
+    
+    & h4+p {
+    font-family: "Joan";
+    font-size: .33cm;
+    font-weight: bold;
+    background-image: url(https://i.imgur.com/LibSb9U.jpg);
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    text-transform: italic;
+    border-bottom: 1px solid #806b39;
+    }
+    
+    & p+table {
+    margin-top: 0;
+    background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+    table-layout: fixed;
+    font-weight: normal !important;
+    border-top: none;
+    
+    & th {
+      font-weight: normal;
+      }
+    }
+    
+  
+    
+    & table {
+    border-top: 1px solid #806b39;
+    background-image: url(https://i.imgur.com/LibSb9U.jpg);
+    }
+    & th:not(:last-child) {
+      border-right: 1px solid #806b39;
+    }
+    
+    & td {
+      background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+      border-top: 1px solid #806b39;
+    }
+    
+    & td:not(:last-child) {
+      border-right: 1px solid #806b39;
+    }
+    
+    & table+div {
+    }
+    
+    & .block {
+      border-top: 1px solid #806b39; 
+      background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+      padding: 0.2cm 0.15cm 0.2cm 0.15cm;
+      
+      &.header {
+        & p {
+          font-weight: bold;
+        }
+        background-image: url(https://i.imgur.com/LibSb9U.jpg);
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+
+  
+  /* QUOTE BLOCK */
+  & .quote {
+     & p {
+      color: #183052;
+      font-weight: bold;
+     }
+     & p:first-child::first-line {
+      font-size: inherit;
+      font-variant: none;
+      font-style: italic;
+     }
+     
+     & .attribution {
+      color: #183052;
+     }
+  }
+  
+  /* ARCHETYPE BLOCK */
+  & .archetype {
+      width:120%;
+      height:382px;
+      margin:0 -20px 0 -35px;
+    
+    & table {
+      margin-top:0.9cm;
+      white-space: pre;
+      margin-left:auto;
+      margin-right:auto;
+      table-layout: fixed;
+      width:67%;
+      
+      & th {
+        font-size: .7cm;
+      }
+    }
+    
+    & .block {
+      margin-bottom:auto;
+      font-size: .30cm;
+      text-align: justify;
+      padding-top:  .9cm;
+      margin-left:9%;
+      margin-right:9%;
+      width:82%;
+      height:75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      & p {
+        font-size: .34cm;
+        line-height: 1.1em;
+        text-align: left;
+      }
+    }
+    
+
+/* 
+////////////////////////////
+//// CHAMPIONS OF ORDER //// 
+////////////////////////////
+*/
+    /*FREE PEOPLE*/
+    &.order-1 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512924106752/ATB_Free_Peoples.png);
+      background-size: 100%;
+      height:340px;
+      
+      & table {
+        width:67%;
+      }
+      
+      & .block {
+        padding-top:45px;
+        height:73%;
+      }
+    }
+    
+    /*DAUGHTERS OF KHAINE*/
+    &.order-2 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513939128460/ATB_Daughters_of_Khaine.png);
+      background-size: 100%;
+      height:382px;
+      
+      & table {
+        width: 72%;
+        margin-top:25px; 
+      }
+      
+      & .block {
+        padding-top:50px;
+        height:75%;
+        margin-top:20px;
+        margin-left:7%;
+        margin-right:7%;
+        width:87%;
+      }
+    }
+    
+    /*FYRESLAYERS*/
+    &.order-3 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513565827203/ATB_Fyreslayers.png);
+      background-size: 100%;
+      height:382px;
+      
+      & table {
+        width: 69%;
+        margin-top:40px; 
+      }
+      
+      & .block {
+        padding-top: 35px;
+        height: 70%;
+        margin-top: 13px;
+        margin-left: 7%;
+        margin-right: 7%;
+        width: 87%;
+      }
+    }
+    
+    /*IDONETH DEEPKIN*/
+    &.order-4 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302514270482472/ATB_Idoneth_Deepkin.png);
+      background-size: 100%;
+      height:382px;
+      
+      & table {
+        width: 69%;
+        margin-top:38px; 
+      }
+      
+      & .block {
+        padding-top: 40px;
+        height: 70%;
+        margin-top: 13px;
+        margin-left: 7%;
+        margin-right: 7%;
+        width: 87%;
+      }
+    }
+    
+    /*KHARADRON OVERlORDS*/
+    &.order-5 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302514656346272/ATB_Kharadron_Overlords.png);
+      background-size: 100%;
+      height:340px;
+      
+      & table {    
+      width: 67%;
+      margin-top: 30px;
+      margin-left: 66px;
+      }
+      
+      & .block {
+        padding-top: 47px;
+        height: 78%;
+        margin-top: 13px;
+        margin-left: 7%;
+        margin-right: 7%;
+        width: 87%;
+      }
+    }
+    
+    /*STORMCAST ETERNALS*/
+    &.order-6 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512219467806/ATB_Stormcast_Eternals.png);
+      background-size: 100%;
+      height:355px;
+      
+      & table {
+        width: 71%;
+        margin-top:42px; 
+      }
+      
+      & .block {
+        padding-top: 38px;
+        height: 73%;
+        margin-top: 13px;
+        margin-left: 7%;
+        margin-right: 7%;
+        width: 87%;
+      }
+    }
+    
+    /*SYLVANETH*/
+    &.order-7 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512592748628/ATB_Sylvaneth.png);
+      background-size: 100%;
+      height:355px;
+      
+      & table {
+        width: 69%;
+        margin-top:20px; 
+      }
+      
+      & .block {
+        padding-top: 60px;
+        height: 79%;
+        margin-top: 13px;
+        margin-left: 9%;
+        margin-right: 9%;
+        width: 87%;
+      }
+    }
+    
+    /*LUMINETH REALM-LORDS*/
+    &.order-8 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513234489546/ATB_Lumineth_Realm-Lords.png);
+      background-size: 100%;
+      height:345px;
+      
+      & table {
+        width: 69%;
+        margin-top:37px; 
+      }
+      
+      & .block {
+        padding-top: 45px;
+        height: 74%;
+        margin-top: 13px;
+        margin-left: 8%;
+        margin-right: 8%;
+        width: 87%;
+      }
+    }
+/* 
+////////////////////////////
+//// CHAMPIONS OF DEATH //// 
+////////////////////////////
+*/
+    /*FLESH-EATER COURTS*/
+    &.death-1 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849001115668/ATB_Flesh-Eater_Courts.png);
+      background-size: 100%;
+      height:356px;
+      
+      & table {
+        width:68%;
+        margin-top:39px; 
+      }
+      
+      & .block {
+        padding-top:40px;
+        height:70%;
+        margin-top:20px;
+        margin-left:8%;
+        margin-right:8%;
+        width:87%;
+      }
+    }
+    
+    /*NIGHTHAUNT*/
+    &.death-2 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849370202202/ATB_Nighthaunt.png);
+      background-size: 100%;
+      height:352px;
+      & table {
+        width: 68%;
+        margin-top: 35px;
+        margin-left: 62px;
+      }
+      
+      & .block {
+        padding-top:40px;
+        height:70%;
+        margin-top:20px;
+        margin-left:7%;
+        margin-right:7%;
+        width:87%;
+      }
+    }
+    
+    /*OSSIARCH BONEREAPERS*/
+    &.death-3 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849684766840/ATB_Ossiarch_Bonereapers.png);
+      background-size: 100%;
+      height:351px;
+      & table {
+        width: 69%;
+        margin-top:30px; 
+      }
+      
+      & .block {
+        padding-top: 35px;
+        height: 70%;
+        margin-top: 13px;
+        margin-left: 7%;
+        margin-right: 7%;
+        width: 87%;
+      }
+    }
+    
+    /*SOULBLIGHT GRAVELORDS*/
+    &.death-4 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302850041303050/ATB_Soulblight_Gravelords.png);
+      background-size: 100%;
+      height:345px;
+      
+      & table {
+        width: 66%;
+        margin-top:22px; 
+      }
+      
+      & .block {
+        padding-top: 50px;
+        height: 74%;
+        margin-top: 13px;
+        margin-left: 8%;
+        margin-right: 8%;
+        width: 87%;
+      }
+    }
+/* 
+//////////////////////////////////
+//// CHAMPIONS OF DESTRUCTION //// 
+//////////////////////////////////
+*/
+
+    /*BONESPLITTERS*/
+    &.destruction-1 {
+      background-image: url(https://media.discordapp.net/attachments/1168309776996909126/1179122552715628617/ATB_Bonesplitterz.png);
+      background-size: 100%;
+      height:439px;
+      
+      & table {
+        width:68%;
+        margin-top:35px; 
+        margin-left:63px;
+      }
+      
+      & .block {
+        padding-top:50px;
+        height:72%;
+        margin-top:20px;
+        margin-left:8%;
+        margin-right:8%;
+        width:87%;
+      }
+    }
+    
+    /*IRONJAWZ*/
+    &.destruction-2 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304780725551165/ATB_Ironjawz.png);
+      background-size: 100%;
+      height:389px;
+      & table {
+        width: 66%;
+        margin-top: 28px;
+      }
+      
+      & .block {
+        padding-top:40px;
+        height:70%;
+        margin-top:20px;
+        margin-left:9%;
+        margin-right:9%;
+        width:82%;
+      }
+    }
+    
+    /*KRULEBOYZ*/
+    &.destruction-3 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304781191135232/ATB_Kruleboyz.png);
+      background-size: 100%;
+      height:384px;
+      & table {
+        width: 68%;
+        margin-top:26px; 
+      }
+      
+      & .block {
+        padding-top: 40px;
+        height: 71%;
+        margin-top: 13px;
+        margin-left: 9%;
+        margin-right: 7%;
+        width: 84%;
+      }
+    }
+    
+    /*OGOR MAWTRIBES*/
+    &.destruction-4 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304781673463869/ATB_Ogor_Mawtribes.png);
+      background-size: 100%;
+      height:387px;
+      
+      & table {
+        width: 65%;
+        margin-top: 27px;
+        margin-right: 65px;
+      }
+      
+      & .block {
+        padding-top: 50px;
+        height: 72%;
+        margin-top: 13px;
+        margin-left: 10%;
+        margin-right: 9%;
+        width: 82%;
+      }
+    }
+    
+    /*GLOOMSPITE GITZ*/
+    &.destruction-5 {
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181997239296593930/ATB_Gloomspite_Gitz.png);
+      background-size: 100%;
+      height:377px;
+      
+      & table {
+        width: 66%;
+        margin-top: 47px;
+        margin-right: 63px;
+      }
+      
+      & .block {
+        padding-top: 45px;
+        height: 72%;
+        margin-top: 13px;
+        margin-left: 10%;
+        margin-right: 9%;
+        width: 82%;
+      }
+    }
+    
+    /*SERAPHON*/
+    &.seraph-1 {
+      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177343413071400961/ATB_Seraphon.png);
+      background-size: 100%;
+      height:325px;
+      
+      & table {
+        width: 66%;
+        margin-top: 23px;
+      }
+      
+      & .block {
+        padding-top: 45px;
+        height: 76%;
+        margin-top: 13px;
+        margin-left: 10%;
+        margin-right: 9%;
+        width: 82%;
+      }
+    }
+  }
+  
+  /* Bookmark Icon — On hold for now */
+  
+  & .banner {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 60%;
+    margin-top:0px;
+    
+    
+    &::before {
+      position: absolute;
+      top: -15px;
+      right: 10px;
+      content: ' ';
+      display: block;
+      width: 74px;
+      height: 78px;
+      transform: rotateX(180deg);
+      background-size: contain;
+    }
+    
+    &.banner-1::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991761002889246/Soulbound-Chapter-Points_0001_Green.png);
+    }
+    &.banner-2::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749829267496/Soulbound-Chapter-Points_0002_Navy.png);
+    }
+    &.banner-3::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749581807636/Soulbound-Chapter-Points_0003_Purple.png);
+    }
+    &.banner-4::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749351125103/Soulbound-Chapter-Points_0004_Blue.png);
+    }
+    &.banner-5::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749011378257/Soulbound-Chapter-Points_0005_Crimson.png);
+    }
+    &.banner-6
+    {
+      & dd {
+        color: #806b39;
+      }
+      &::before {
+        background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991748646477865/Soulbound-Chapter-Points_0006_White.png);
+      }
+    }
+    &.banner-7::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991748289966242/Soulbound-Chapter-Points_0007_Pink.png);
+    }
+    &.banner-8::before {
+      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991747644039168/Soulbound-Chapter-Points_0009_Turquoise.png);
+    }
+    &.banner-9::before {
+      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181991746964562112/Soulbound-Chapter-Points_0011_Black.png);
+    }
+    
+    &.banner-10
+    {
+      & dd {
+        color: #806b39;
+      }
+      &::before {
+        background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181991747220418631/Soulbound-Chapter-Points_0010_Silver.png);
+      }
+    }
+    
+    & dl {
+      position: relative;
+      
+      & dt {
+        position: absolute;
+        top: 20px;
+        right: 72px;
+        font-family: "MrEavesRemake";
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #806b39;
+        text-align: right;
+        direction: rtl;
+      }
+      & dd {
+        position: absolute;
+        top:11px;
+        right:40px;
+        font-family: "Fritz Quadrata";
+        font-size: .80cm;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+
+  .footnote {
+    bottom: 40px;
+  }
+  
+    /*DROP CAP*/
+  h1 + p::first-letter {
+    background-image: unset;
+    color: black;
+  }
+}
