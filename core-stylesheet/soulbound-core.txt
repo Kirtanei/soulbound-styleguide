@@ -26,7 +26,7 @@
 
   & .frontCover {
       content: ' ';
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181172818721902622/Soulbound.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/logos/Soulbound-logo.png?raw=true);
       background-size: 550px 206px;
       width: 550px;
       height: 206px;
@@ -38,7 +38,7 @@
       &.module {
         &::before {
           content: ' ';
-          background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181372137232154635/Through_Fire__Smoke-1Xa.png);
+          background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/covers/module-cover--top.png?raw=true);
           background-size: contain;
           position:absolute;
           top:0;
@@ -51,7 +51,7 @@
         
         &::after {
           content: ' ';
-          background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181372138322657312/Through_Fire__Smoke-1Xb.png);
+          background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/covers/module-cover--bottom.png?raw=true);
           background-size: contain;
           position:absolute;
           bottom: 0;
@@ -74,7 +74,8 @@
       filter: drop-shadow(0 0 1px black);
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
-      background-image: url(https://runebrush.pa-sy.com/warscroll/image/bg-big.jpg);
+      /* TextDetail from 'runebrush.pa-sy.com/warscroll' */
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/scratched-surface.jpg?raw=true);
       background-size: 50px 50px;
     }
     & h2 {
@@ -108,7 +109,7 @@
   &:has(.pageNumber)::after {
     content: ' ';
     position: absolute;
-    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178081957796659313/Soulbound_Page_Number_Star.png);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/pagenumber-star.png?raw=true);
     background-size: 1.8cm 1.8cm;
     width: 1.8cm;
     height: 1.8cm;
@@ -118,7 +119,7 @@
   
   /* Every 2nd page (even) */
   &:nth-child(even) {
-    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178049468772397116/Soulbound_Background_Page_R.jpg);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/page-background-r.jpg?raw=true);
     
     /* Page Number placement on even pages */
     & .pageNumber {
@@ -134,7 +135,7 @@
 
   /* Every 2nd page (odd) */
   &:nth-child(odd) {
-    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178049468445237258/Soulbound_Page_Background_L.jpg);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/page-background-l.jpg?raw=true);
     
     &::after {
       left: 0.2cm;
@@ -195,7 +196,7 @@
       &::after {
         content: ' ';
         position: absolute;
-        background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181371061342838805/Table_of_Contents_Section_Line_Element.png);
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/toc/contents-divider.png?raw=true);
         background-size: contain;
         width:92%;
         height: 15px;
@@ -358,7 +359,7 @@
     &::before {
       position: absolute;
       content: ' ';
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178060677622026360/Soulbound_Tooltip_Top_v4.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/notes/note--top.png?raw=true);
       width: 325px;
       height: 94px;
       top: -63px;
@@ -369,7 +370,7 @@
     &::after {
       position: absolute;
       content: ' ';
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178060677068357642/Soulbound_Tooltip_Bottom_v4.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/notes/note--bottom.png?raw=true);
       width: 325px;
       height: 94px;
       bottom: -63px;
@@ -426,7 +427,7 @@
       display:block;
       top:-0.51cm;;
       left:-0.27cm;
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
       background-size: .5cm 1cm;
       background-repeat: none;
       width: .5cm;
@@ -440,7 +441,7 @@
       background-repeat: none;
       top:-0.51cm;;
       right:-0.23cm;
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
       background-size: .5cm 1cm;
       width: .5cm;
       height: 1cm;
@@ -449,7 +450,7 @@
     
     & +table {
       border: 1px solid #806b39;
-      background-image: url(https://i.imgur.com/LibSb9U.jpg);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
       margin-top: 0px;
       
       & th,td {
@@ -463,11 +464,11 @@
       
       & td {
         border-top: 1px solid #806b39;
-        background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
       }
       
       & tr:nth-child(even) td {
-        background-image: url(https://i.imgur.com/LibSb9U.jpg); 
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true); 
       }
       
       
@@ -485,7 +486,7 @@
     position: absolute;
     top:-0.51cm;;
     left:-0.27cm;
-    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
     background-size: .5cm 1cm;
     width: .5cm;
     height: 1cm;
@@ -497,7 +498,7 @@
     position: absolute;
     top:-0.51cm;;
     right:-0.27cm;
-    background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1178080942611517512/Soulbound_Statblock_Corner_Comet.png);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
     background-size: .5cm 1cm;
     width: .5cm;
     height: 1cm;
@@ -516,7 +517,7 @@
     position: absolute;
     top: 65px;
     left: 10px;
-    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077553664204831/Soulbound_Melee_Symbol.png');
+    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--melee.png?raw=true');
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
@@ -526,7 +527,7 @@
     position: absolute;
     top: 63px;
     left: 125px;
-    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077553278332988/Soulbound_Accuracy_Symbol.png');
+    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--accuracy.png?raw=true');
     background-size: 20px 20px;
     width: 20px;
     height: 20px;
@@ -536,7 +537,7 @@
     position: absolute;
     top: 65px;
     left: 235px;
-    background-image: url('https://media.discordapp.net/attachments/1177303854681956503/1178077552946991124/Soulbound_Defence_Symbol.png');
+    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--defence.png?raw=true');
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
@@ -582,7 +583,7 @@
     font-family: "Joan";
     font-size: .33cm;
     font-weight: bold;
-    background-image: url(https://i.imgur.com/LibSb9U.jpg);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
     text-align: center;
     margin: 0;
     padding: 5px;
@@ -592,7 +593,7 @@
     
     & p+table {
     margin-top: 0;
-    background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
     table-layout: fixed;
     font-weight: normal !important;
     border-top: none;
@@ -606,14 +607,14 @@
     
     & table {
     border-top: 1px solid #806b39;
-    background-image: url(https://i.imgur.com/LibSb9U.jpg);
+    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
     }
     & th:not(:last-child) {
       border-right: 1px solid #806b39;
     }
     
     & td {
-      background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
       border-top: 1px solid #806b39;
     }
     
@@ -626,14 +627,14 @@
     
     & .block {
       border-top: 1px solid #806b39; 
-      background-image: url(https://i.imgur.com/Ad0t1YR.jpg);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
       padding: 0.2cm 0.15cm 0.2cm 0.15cm;
       
       &.header {
         & p {
           font-weight: bold;
         }
-        background-image: url(https://i.imgur.com/LibSb9U.jpg);
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
         text-transform: uppercase;
       }
     }
@@ -705,7 +706,7 @@
 */
     /*FREE PEOPLE*/
     &.order-1 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512924106752/ATB_Free_Peoples.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-1--FreePeoples.png?raw=true);
       background-size: 100%;
       height:340px;
       
@@ -721,7 +722,7 @@
     
     /*DAUGHTERS OF KHAINE*/
     &.order-2 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513939128460/ATB_Daughters_of_Khaine.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-2--DaughtersOfKhaine.png?raw=true);
       background-size: 100%;
       height:382px;
       
@@ -742,7 +743,7 @@
     
     /*FYRESLAYERS*/
     &.order-3 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513565827203/ATB_Fyreslayers.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-3--Fyreslayers.png?raw=true);
       background-size: 100%;
       height:382px;
       
@@ -763,7 +764,7 @@
     
     /*IDONETH DEEPKIN*/
     &.order-4 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302514270482472/ATB_Idoneth_Deepkin.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-4--IdonethDeepkin.png?raw=true);
       background-size: 100%;
       height:382px;
       
@@ -784,7 +785,7 @@
     
     /*KHARADRON OVERlORDS*/
     &.order-5 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302514656346272/ATB_Kharadron_Overlords.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-5--KharadronOverlords.png?raw=true);
       background-size: 100%;
       height:340px;
       
@@ -806,7 +807,7 @@
     
     /*STORMCAST ETERNALS*/
     &.order-6 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512219467806/ATB_Stormcast_Eternals.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-6--StormcastEternals.png?raw=true);
       background-size: 100%;
       height:355px;
       
@@ -827,7 +828,7 @@
     
     /*SYLVANETH*/
     &.order-7 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302512592748628/ATB_Sylvaneth.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-7--Sylvaneth.png?raw=true);
       background-size: 100%;
       height:355px;
       
@@ -848,7 +849,7 @@
     
     /*LUMINETH REALM-LORDS*/
     &.order-8 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302513234489546/ATB_Lumineth_Realm-Lords.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-8--LuminethRealm-Lords.png?raw=true);
       background-size: 100%;
       height:345px;
       
@@ -873,7 +874,7 @@
 */
     /*FLESH-EATER COURTS*/
     &.death-1 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849001115668/ATB_Flesh-Eater_Courts.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-1--Flesh-EaterCourts.png?raw=true);
       background-size: 100%;
       height:356px;
       
@@ -894,7 +895,7 @@
     
     /*NIGHTHAUNT*/
     &.death-2 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849370202202/ATB_Nighthaunt.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-2--Nighthaunt.png?raw=true);
       background-size: 100%;
       height:352px;
       & table {
@@ -915,7 +916,7 @@
     
     /*OSSIARCH BONEREAPERS*/
     &.death-3 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302849684766840/ATB_Ossiarch_Bonereapers.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-3--OssiarchBonereapers.png?raw=true);
       background-size: 100%;
       height:351px;
       & table {
@@ -935,7 +936,7 @@
     
     /*SOULBLIGHT GRAVELORDS*/
     &.death-4 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177302850041303050/ATB_Soulblight_Gravelords.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-4--SoulblightGravelords.png?raw=true);
       background-size: 100%;
       height:345px;
       
@@ -961,7 +962,7 @@
 
     /*BONESPLITTERS*/
     &.destruction-1 {
-      background-image: url(https://media.discordapp.net/attachments/1168309776996909126/1179122552715628617/ATB_Bonesplitterz.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-1--Bonesplitterz.png?raw=true);
       background-size: 100%;
       height:439px;
       
@@ -983,7 +984,7 @@
     
     /*IRONJAWZ*/
     &.destruction-2 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304780725551165/ATB_Ironjawz.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-2--Ironjawz.png?raw=true);
       background-size: 100%;
       height:389px;
       & table {
@@ -1003,7 +1004,7 @@
     
     /*KRULEBOYZ*/
     &.destruction-3 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304781191135232/ATB_Kruleboyz.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-3--Kruleboyz.png?raw=true);
       background-size: 100%;
       height:384px;
       & table {
@@ -1023,7 +1024,7 @@
     
     /*OGOR MAWTRIBES*/
     &.destruction-4 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177304781673463869/ATB_Ogor_Mawtribes.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-4--OgorMawtribes.png?raw=true);
       background-size: 100%;
       height:387px;
       
@@ -1045,7 +1046,7 @@
     
     /*GLOOMSPITE GITZ*/
     &.destruction-5 {
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181997239296593930/ATB_Gloomspite_Gitz.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-5--GloomspiteGitz.png?raw=true);
       background-size: 100%;
       height:377px;
       
@@ -1067,7 +1068,7 @@
     
     /*SERAPHON*/
     &.seraph-1 {
-      background-image: url(https://media.discordapp.net/attachments/707943098168377404/1177343413071400961/ATB_Seraphon.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/seraphon/Seraphon-1--Seraphon.png?raw=true);
       background-size: 100%;
       height:325px;
       
@@ -1087,7 +1088,7 @@
     }
   }
   
-  /* Bookmark Icon — On hold for now */
+  /* Banners */
   
   & .banner {
     position: absolute;
@@ -1110,19 +1111,19 @@
     }
     
     &.banner-1::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991761002889246/Soulbound-Chapter-Points_0001_Green.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0001_Green.png?raw=true);
     }
     &.banner-2::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749829267496/Soulbound-Chapter-Points_0002_Navy.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0002_Navy.png?raw=true);
     }
     &.banner-3::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749581807636/Soulbound-Chapter-Points_0003_Purple.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0003_Purple.png?raw=true);
     }
     &.banner-4::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749351125103/Soulbound-Chapter-Points_0004_Blue.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0004_Blue.png?raw=true);
     }
     &.banner-5::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991749011378257/Soulbound-Chapter-Points_0005_Crimson.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0005_Crimson.png?raw=true);
     }
     &.banner-6
     {
@@ -1130,17 +1131,17 @@
         color: #806b39;
       }
       &::before {
-        background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991748646477865/Soulbound-Chapter-Points_0006_White.png);
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0006_White.png?raw=true);
       }
     }
     &.banner-7::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991748289966242/Soulbound-Chapter-Points_0007_Pink.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0007_Pink.png?raw=true);
     }
     &.banner-8::before {
-      background-image: url(https://cdn.discordapp.com/attachments/1177303854681956503/1181991747644039168/Soulbound-Chapter-Points_0009_Turquoise.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0008_Orange.png?raw=true);
     }
     &.banner-9::before {
-      background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181991746964562112/Soulbound-Chapter-Points_0011_Black.png);
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0009_Turquoise.png?raw=true);
     }
     
     &.banner-10
@@ -1149,8 +1150,12 @@
         color: #806b39;
       }
       &::before {
-        background-image: url(https://media.discordapp.net/attachments/1177303854681956503/1181991747220418631/Soulbound-Chapter-Points_0010_Silver.png);
+        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0010_Silver.png?raw=true);
       }
+    }
+    
+    &.banner-11::before {
+      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0011_Black.png?raw=true);
     }
     
     & dl {
