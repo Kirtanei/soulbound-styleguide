@@ -590,11 +590,12 @@
     text-transform: italic;
     border-bottom: 1px solid #806b39;
     }
-    
+    & table {
+      table-layout: fixed;
+    }
     & p+table {
     margin-top: 0;
     background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
-    table-layout: fixed;
     font-weight: normal !important;
     border-top: none;
     
