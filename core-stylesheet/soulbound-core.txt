@@ -351,7 +351,7 @@
     background-color: black;
     border-image: none;
     padding: 0.4cm 0.3cm 0.4cm 0.3cm;
-    border: 3px solid #b5a55f;
+    border: 3px inset #b5a55f;
     box-shadow: none;
     margin-bottom:30px;
     margin-top: 45px;
