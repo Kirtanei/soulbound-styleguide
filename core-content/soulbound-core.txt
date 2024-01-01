@@ -1,0 +1,310 @@
+
+{{frontCover}}
+
+
+ # Homebrewery Style-guide
+
+ ## Get started on your Soulbound content with Homebrewery
+
+![background image](https://media.discordapp.net/attachments/1031505835903418408/1181208736132505643/kirtanei_Warhammer_scribe_desk_office_in_the_style_of_magic_the_84ec6bd7-933a-4cd1-82dc-eaf0d998eccb.png){position:absolute,bottom:0,left:0,height:100%}
+
+\page
+
+
+{{frontCover,module}}
+
+ # Homebrewery Style-guide
+
+ ## Get started on your Soulbound content with Homebrewery
+
+![background image](https://media.discordapp.net/attachments/1031505835903418408/1181208736132505643/kirtanei_Warhammer_scribe_desk_office_in_the_style_of_magic_the_84ec6bd7-933a-4cd1-82dc-eaf0d998eccb.png){position:absolute,bottom:-230px,left:0,width:100%;}
+
+\page
+
+{{toc,wide
+# Table Of Contents
+
+- ### [{{ Examples}}{{ 4}}](#p4)
+  - #### [{{ Headings}}{{ 4}}](#p4)
+  - #### [{{ NPC Stat Blocks}}{{ 5}}](#p5)
+  - #### [{{ Archetypes}}{{ 6}}](#p6)
+    - [{{ Aethernaut Operator }}{{ 6}}](#p6)
+  - #### [{{ Tables}}{{ 7}}](#p7)
+  - #### [{{ Frontpages}}{{ 8}}](#p8)
+  - #### [{{ Chapter Banners}}{{ 8}}](#p8)
+- ### [{{ Credit}}{{ 8}}](#p8)
+  - [{{ Bad Moon Rae}}{{ 8}}](#p8)
+- ### {{ —}}{{ 8}}
+  - [{{ This Is Not Actual Content}}{{ —}}]()
+  - [{{ Just Using This}}{{ —}}]()
+    - [{{ To Fill Out The }}{{ —}}]()
+    - [{{ Table of Contents }}{{ —}}]()
+    - [{{ To Give An Idea }}{{ —}}]()
+    - [{{ Of How It Might }}{{ —}}]()
+  - [{{ Look In Real Scenario}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+}}
+
+:
+
+
+
+{{note
+##### Generating
+The Table of Contents can be generated via the Homebrewery functions; from *Text Editor*, select *Table of Contents*. This will auto-generate the table of contents based on your headings and  automatically indent them based on heading level (headings 1 through 3. No more, no less!). If you make changes to your content, you will need to re-insert a new table of contents, it will **not** automatically update along with your content.
+
+##### Omitting Entries
+To omit an entry from being automatically generated in the contents table via the *Table of Contents* function, add a whitespace character (such as a space) in front of the heading you wish to omit. It will still render normally on the page.
+
+}}
+
+
+
+{{pageNumber,auto}}
+\page
+
+# Examples
+The following guide is going to present a number of examples that you can draw from, either when starting out using Homebrewery, or if you're familiar with how Homebrewery work, and are getting familiarized with these Soulbound-tuned changes. Not everything works out of the box with the normal Homebrewery functions, since those are tuned for D&D content, that follow different content structures *(such as NPC stat blocks)*. 
+
+
+
+## Headings
+The following are examples of the Soulbound-styled headings.
+:::::::::::::::::::::
+ # H1 Heading
+The h1 heading, used for chapters and spans both columns. The core book offers an alternate h1 header in white, and sometimes spans multiple lines — this is not yet replicated by this style layout. Only the above is available out of the box; centered and golden-colored. 
+
+ ## H2 Header
+The h2 heading, *generally* used to sub-divide the contents laid out by the chapter header. 
+
+
+ ### H3 Heading
+The h3 heading, often used as the archetype heading (see Archetype Example), or before a group of h4 items.
+
+#### H4 Heading
+The h4 heading is the basic element heading. Used for anything that portrays an element in the book; from equipment and talents, to spells and miracles.
+
+##### H5 Heading
+The h5 heading is generally when a h4 item can be further sub-divided or expanded upon; such as the species bonus sub-element, or a Talent granting specific abilities (see *Nav-League Member; Aethersight* from **Champions of Order**).
+
+- **List Item:** Represents items in a list. Such as when offering options for a player to choose from.
+
+___
+
+{{pageNumber,auto}}
+\page
+
+## NPC Stat Blocks
+The stat block grows with its content. It does not currently support spanning multiple columns (if brewing very large stat blocks).
+
+::
+{{note
+##### NPC Stat Block
+The structure of the NPC Stat blocks are important, and must adhere to the example below. The content can be what you like, but straying from the markdown structure is like to break its appearance.
+}}
+
+
+::
+{{monster,frame
+#### Stat block
+
+*Small fella, Minion*
+
+|  Average  |  Poor  |  Poor  |
+|:---------:|:------:|:------:|
+
+|  Armor  |  Toughness  |  Wounds  | Mettle |
+|:---------:|:------:|:------:|:----:|
+| 1 | 1 | — | — |
+
+{{
+**Speed:** :: Normal
+**Initiative:** :: 3
+**Natural Awareness:** :: 1
+**Skills:** :: Awareness (+1d6), Fortitude (+1d6), Weapon Skill (+1d6)
+}}
+
+{{header
+Traits
+}}
+
+{{
+**Encouraging Words:** This tiny critter believes in you. You can do the thing!
+}}
+
+{{header
+Attack
+}}
+
+{{
+**Trying Its Very Best:** Melee Attack (Average), 2d6, 1 + S Damage. *Crushing.*
+}}
+
+| Body | Mind | Soul |
+|:----:|:----:|:----:|
+| 1    | 1    | 2    |
+}}
+
+
+
+{{pageNumber,auto}}
+\page
+
+## Archetypes
+
+### Aethernaut Operator 
+___
+*“In the heart of the storm, where the ground quakes beneath the clash of titans, the Aethernaut Operator stands unyielding. They wield the might of innovation—a ground-bound colossus, forging a legacy with every echoing step.”*
+
+Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+
+Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
+
+{{quote
+“I am the indomitable guardian, a living testament to ingenuity — triumph forged from steel.”
+
+{{attribution Letva Gudmundr of the Brass Vanguard }}
+}}
+
+Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
+
+:
+{{archetype,order-5
+|  2  |  4  |  1  |
+|:---:|:---:|:---:|
+
+{{
+**Species:** Duardin (Kharadron Overlords)
+___
+**Core Skill:** Crafting
+___
+**Skills (9 XP):** Athletics, Awareness, Fortitude, Intimidation, Intuition, Medicine, Might, Reflexes, Weapon Skill
+___
+**Core Talents:** Endrineers Guild Member
+___
+**Talents (Choose 3):** Aethermatics Over Superstition, Bulwark, Hurler*, Iron Grip*, Pressing Attack*, The Bigger They Are
+___
+**Equipment:** : Aethernaut Operator’s Rig, Endrineer's Tools, a satchel filled with design blueprints, and 85 drops of Aqua Ghyranis. 
+}}
+}}
+
+:
+
+{{note
+##### Archetype Block
+The Archetype blocks requires a faction and a number to designate an archetype box for it. Factions as of writing are *order (1-8)*, *death (1-4)*, *destruction (1-4)* and *seraph (1)*. The order of content is also important (Attributes, **then** the text). Use the example in this document to write up your own.
+
+***Example:** An Archetype box for a Fyreslayer is designated as 'archetype,order-3'.*  
+
+**Note** that archetype blocks have varying heights. Pick your intended archetype block and design around that.
+}}
+
+
+![](https://media.discordapp.net/attachments/1031505835903418408/1182360767119499304/Dwarf_Sample_Archetype.png) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
+
+{{pageNumber,auto}}
+\page
+
+## Tables
+Tables are fairly simple constructs, and can be generated using Homebrewery; select *Tables* → *Table/Wide Table*. The auto-generated wide table uses standard annotation for a column-spanning table, but that won't be necessary with the **Soulbound** style sheet. The heading used for the table title dictates the size of the table.
+
+- A h4 heading (\#\#\#\#) denotes a wide table.
+- A h5 heading (\#\#\#\#\#) denotes a small table.
+::
+{{note
+##### Wide Table Behavior
+Content above a Wide table (and all other wide content, really) splits the columns above it as being a full page, rather than going down to the end, as seen here.
+}}
+
+
+
+
+
+
+
+#### A Wide Table
+| Rating | Explanation | 
+|:--:|:-------|
+| Extraordinary  | You have an almost supernatural talent for the task.  |
+| Superb  | Few in all the realms can match your skill or ability. You are exceptional.  |
+| Great  | You excel at the task.  |
+| Good  | You are well-trained and have a natural gift for the task.  |
+| Average  | You have some training or natural affinity in that area.  |
+| Poor  | You are inexperienced or particularly inept.  |
+
+##### A Normal Table
+| Rating | Explanation | 
+|:--:|:-------|
+| Extraordinary  | You have an almost supernatural talent for the task.  |
+| Superb  | Few in all the realms can match your skill or ability. You are exceptional.  |
+| Great  | You excel at the task.  |
+| Good  | You are well-trained and have a natural gift for the task.  |
+| Average  | You have some training or natural affinity in that area.  |
+| Poor  | You are inexperienced or particularly inept. |
+
+{{pageNumber,auto}}
+\page
+
+## Frontpages
+When working with the frontpage, add \{\{ frontCover \}\} to the page. It adds the **Soulbound** logo and modifies both the h1- and h2 headings when on the same page. 
+- **h1.** The text is added below the **Soulbound** logo.
+- **h2.** The text is added as the frontpage footer.
+
+#### Adventure
+The frontpage block can be expanded with the module tag, doing so adds the black panes to the top and bottom of the frontpage; \{\{ frontCover,module \}\}.
+:
+{{note
+##### Limited Generation Support
+It is possible to generate a frontpage using Homebrewery functions; *PHB* → *Front Page Cover*, but it is fundamentally designed with D&D in mind and you'll have a bit of manual cleanup to do because of that.
+}}
+
+
+\column
+
+## Chapter Banners
+Chapter banners lets you add an additional level of both detail and organisation to your pages.
+
+There's a total of 11 banners, noted as banner-1 through banner-11.
+
+
+
+{{banner,banner-1
+  Examples::1
+}}
+:::::::::::::::::::::::::::::::::
+# Credit
+
+### Bad Moon Rae
+***Huge*** thanks to *Bad Moon Rae* for helping me get ahold of — and editing — the graphics for this project. This couldn't have happened otherwise.
+
+##### Artwork
+Artwork for the frontpage and the archetype example are both AI generated by MidJourney.
+
+## Author's Note
+Hi. This is Kirtanei. I hope this styleguide will prove useful in your homebrewing endeavors. Feel free to reach out to me on Discord for any changes and adjustments to this. I hope to keep this updated.
+
+
+{{pageNumber,auto}}
