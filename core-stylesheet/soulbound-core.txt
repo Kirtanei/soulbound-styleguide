@@ -1,3 +1,7 @@
+/*
+    Soulbound Stylesheet presented by Kirtanei.
+*/
+
 @import (less) "./themes/assets/assets.less";
 @import url("https://fonts.cdnfonts.com/css/friz-quadrata");
 @import url("https://fonts.cdnfonts.com/css/adobe-garamond-pro-2");
