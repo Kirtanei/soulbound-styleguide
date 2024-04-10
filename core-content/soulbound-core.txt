@@ -6,7 +6,7 @@
 
  ## Get started on your Soulbound content with Homebrewery
 
-![background image](https://media.discordapp.net/attachments/1031505835903418408/1181208736132505643/kirtanei_Warhammer_scribe_desk_office_in_the_style_of_magic_the_84ec6bd7-933a-4cd1-82dc-eaf0d998eccb.png?ex=660aa6dc&is=65f831dc&hm=f584fc644a2b0c21bbda9c77882c754f07d68efc28e1fec555de0cd72dd092ed&=&format=webp&quality=lossless){position:absolute,bottom:0,left:0,height:100%}
+![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:0,left:0,height:100%}
 
 \page
 
@@ -17,7 +17,7 @@
 
  ## Get started on your Soulbound content with Homebrewery
 
-![background image](https://media.discordapp.net/attachments/1031505835903418408/1181208736132505643/kirtanei_Warhammer_scribe_desk_office_in_the_style_of_magic_the_84ec6bd7-933a-4cd1-82dc-eaf0d998eccb.png?ex=660aa6dc&is=65f831dc&hm=f584fc644a2b0c21bbda9c77882c754f07d68efc28e1fec555de0cd72dd092ed&=&format=webp&quality=lossless){position:absolute,bottom:-230px,left:0,width:100%;}
+![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:-230px,left:0,width:100%;}
 
 \page
 
@@ -226,7 +226,7 @@ The Archetype blocks requires a faction and a number to designate an archetype b
 }}
 
 
-![](https://media.discordapp.net/attachments/1031505835903418408/1182360767119499304/Dwarf_Sample_Archetype.png?ex=66059d46&is=65f32846&hm=041f2468f2bb006b687cde5a988e1bceb8f42354c2ac8b07ffaf929a63f635cc&=&format=webp&quality=lossless&width=676&height=676) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
+![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
 
 {{pageNumber,auto}}
 \page
