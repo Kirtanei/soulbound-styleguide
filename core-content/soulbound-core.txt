@@ -223,11 +223,14 @@ The Archetype blocks requires a faction and a number to designate an archetype b
 ***Example:** An Archetype box for a Fyreslayer is designated as 'archetype,order-3'.*  
 
 **Note** that archetype blocks have varying heights. Pick your intended archetype block and design around that.
+
+##### White Backgrounds
+When using an image with a non-transparent white background, add "transparent" to the list of properties to the image (noted in { } brackets).
 }}
 
-
+{{float
 ![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
-
+}}
 {{pageNumber,auto}}
 \page
 
