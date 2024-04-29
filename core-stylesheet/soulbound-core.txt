@@ -1197,4 +1197,8 @@
     background-image: unset;
     color: black;
   }
+  
+  .transparent {
+    mix-blend-mode:darken;
+  }
 }
