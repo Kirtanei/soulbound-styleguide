@@ -1,1200 +1,325 @@
-/*
-    Soulbound Stylesheet presented by Kirtanei.
-*/
 
-@import (less) "./themes/assets/assets.less";
-@import url("https://fonts.cdnfonts.com/css/friz-quadrata");
-@import url("https://fonts.cdnfonts.com/css/adobe-garamond-pro-2");
-@import url('https://fonts.cdnfonts.com/css/joan-2');
-@import url('https://fonts.cdnfonts.com/css/minion-pro');
-
-:root {
-  //Colors
-  --HB_Color_Accent: #ebcec3; // Salmon
-  --HB_Color_Footnotes: #5c5c5c; // Dark gray
-  --HB_Color_Soulbound_Gold: #806b39; // Dark Gold
-}
-
-/* Removes Small-Caps in first line */
-.page h1 + p:first-line {
-  all: unset;
-}
-
-/* ////// PAGE GENERAL START ////// */
-
-.page {
-
-  &:has(.frontCover.module) img {
-    z-index: -2;
-  }
-
-  & .frontCover {
-      content: ' ';
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/logos/Soulbound-logo.png?raw=true);
-      background-size: 550px 206px;
-      width: 550px;
-      height: 206px;
-      top: 15px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      
-      &.module {
-        &::before {
-          content: ' ';
-          background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/covers/module-cover--top.png?raw=true);
-          background-size: contain;
-          position:absolute;
-          top:0;
-          left:0;
-          width:100%;
-          height: 426px;
-          z-index: -1;
-          margin: auto;
-        }
-        
-        &::after {
-          content: ' ';
-          background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/covers/module-cover--bottom.png?raw=true);
-          background-size: contain;
-          position:absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 203px;
-          z-index: -1;
-        }
-      }
-    }
-  &:has(.frontCover) {
-    & h1 {
-      font-family: "Friz Quadrata";
-      margin-bottom: 0.5cm;
-      margin-top: 0;
-      color: #806b39;
-      font-size: 1.9cm;
-      border: none;
-      font-weight: bold;
-      filter: drop-shadow(0 0 1px black);
-      -webkit-background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-      /* TextDetail from 'runebrush.pa-sy.com/warscroll' */
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/scratched-surface.jpg?raw=true);
-      background-size: 50px 50px;
-    }
-    & h2 {
-      border: none;
-      position: absolute;
-      right: 0;
-      bottom: 1.3cm;
-      left: 0;
-      width: 70%;
-      margin-right: auto;
-      margin-left: auto;
-      font-family: "Friz Quadrata";
-      font-size: .6cm;
-      color: white;
-      text-align: center;
-      filter: drop-shadow(0 0 1px black);
-      letter-spacing: unset;
-   }
-   
-   &:has(.module) {
-    & h2 {
-      bottom:1.9cm;
-    }
-   }
-  }
-  
-  /* Background Image */
-  background-size: cover;
-  background-repeat: round;
-  
-  &:has(.pageNumber)::after {
-    content: ' ';
-    position: absolute;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/pagenumber-star.png?raw=true);
-    background-size: 1.8cm 1.8cm;
-    width: 1.8cm;
-    height: 1.8cm;
-    text-align:center;
-    bottom: 0.2cm;
-  }
-  
-  /* Every 2nd page (even) */
-  &:nth-child(even) {
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/page-background-r.jpg?raw=true);
-    
-    /* Page Number placement on even pages */
-    & .pageNumber {
-      left:unset;
-      right: .45cm;
-    }
-    
-    &::after {
-      right: 0.2cm;
-      left:unset;
-    }
-  }
-
-  /* Every 2nd page (odd) */
-  &:nth-child(odd) {
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/page-detail/page-background-l.jpg?raw=true);
-    
-    &::after {
-      left: 0.2cm;
-      right:unset;
-    }
-  }
-  
-  /* General page number rules */
-  & .pageNumber {
-    position: absolute;
-    left: .45cm;
-    bottom: .91cm;
-    width: 50px;
-    font-size: 1em;
-    color: black;
-    text-align: center;
-    text-indent: 0;
-  }
-  
-  & .toc {
-    &.wide {
-      width:106%;
-      margin-left: -3%;
-      column-count: 3;
-      column-fill: balance;
-      column-gap: .5cm;
-      column-width: 100px;
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      -webkit-column-width: 100px;
-      -moz-column-width: 100px;
-      -webkit-column-gap: .5cm;
-      -moz-column-gap: .5cm;
-    }
-    
-    & h1 {
-      -webkit-column-span: initial;
-      -moz-column-span: initial;
-      margin-bottom: 0.5cm;
-      font-size: 1.1cm;
-      line-height: 1.25cm;
-      border: none;
-      visibility: hidden;
-      line-height: 20px;
-      margin-bottom: 2cm;
-      
-      &::after {
-        display: block;
-        visibility: initial;
-        content: "Contents";
-      }
-    }
-    
-    & h3 {
-      position: relative;
-      margin-bottom: .5cm;
-      
-      &::after {
-        content: ' ';
-        position: absolute;
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/toc/contents-divider.png?raw=true);
-        background-size: contain;
-        width:92%;
-        height: 15px;
-        transform: translateX(4%);
-      }
-      
-      & span {
-        &:first-child {
-          &::after {
-            content: unset;
-          }
-        }
-        
-        &:has(+span) {
-          width:100%;
-          text-align: center;
-          display: block;
-          color: black;
-          font-size: .52cm;
-          text-transform: uppercase;
-          line-height:1em;
-          font-family: "Friz Quadrata";
-        }
-        
-        &+span {
-          display: none !important;
-        }
-      }
-    }
-    
-    & h4 {
-      color: inherit;
-      font-size: inherit;
-      font-family: "BookInsanityRemake";
-      font-weight: normal;
-      text-transform: none;
-      margin-top: 0;
-    }
-  }
-  
-  &:has(.toc) {
-    & .wide {
-      
-    }
-    
-    /* Hide Page Number on Table of Contents */
-    & .pageNumber {
-      display: none;
-    }
-  }
+{{frontCover}}
 
 
-  
+ # Homebrewery Style-guide
+
+ ## Get started on your Soulbound content with Homebrewery
+
+![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:0,left:0,height:100%}
+
+\page
+
+
+{{frontCover,module}}
+
+ # Homebrewery Style-guide
+
+ ## Get started on your Soulbound content with Homebrewery
+
+![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:-230px,left:0,width:100%;}
+
+\page
+
+{{toc,wide
+# Table Of Contents
+
+- ### [{{ Examples}}{{ 4}}](#p4)
+  - #### [{{ Headings}}{{ 4}}](#p4)
+  - #### [{{ NPC Stat Blocks}}{{ 5}}](#p5)
+  - #### [{{ Archetypes}}{{ 6}}](#p6)
+    - [{{ Aethernaut Operator }}{{ 6}}](#p6)
+  - #### [{{ Tables}}{{ 7}}](#p7)
+  - #### [{{ Frontpages}}{{ 8}}](#p8)
+  - #### [{{ Chapter Banners}}{{ 8}}](#p8)
+- ### [{{ Credit}}{{ 8}}](#p8)
+  - [{{ Bad Moon Rae}}{{ 8}}](#p8)
+- ### [{{ Submitting Issues}}{{ 9}}](#p9)
+  - [{{ Github}}{{ 9}}](#p9)
+  - [{{ Discord}}{{ 9}}](#p9)
+- ### {{ —}}{{ 8}}
+  - [{{ This Is Not Actual Content}}{{ —}}]()
+  - [{{ Just Using This}}{{ —}}]()
+    - [{{ To Fill Out The }}{{ —}}]()
+    - [{{ Table of Contents }}{{ —}}]()
+    - [{{ To Give An Idea }}{{ —}}]()
+    - [{{ Of How It Might }}{{ —}}]()
+  - [{{ Look In Real Scenario}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+- ### {{ —}}{{ 8}}
+  - [{{ Lorem ipsum dolor sit amet}}{{ —}}]()
+  - [{{ consectetur adipiscing elit}}{{ —}}]()
+    - [{{ Praesent aliquam, lacus quis }}{{ —}}]()
+    - [{{ gravida euismod }}{{ —}}]()
+    - [{{ nibh odio }}{{ —}}]()
+    - [{{ tincidunt  }}{{ —}}]()
+  - [{{ metus, a posuere erat sapien}}{{ —}}]()
+}}
+
+:
+
+
+
+{{note
+##### Generating
+The Table of Contents can be generated via the Homebrewery functions; from *Text Editor*, select *Table of Contents*. This will auto-generate the table of contents based on your headings and  automatically indent them based on heading level (headings 1 through 3. No more, no less!). If you make changes to your content, you will need to re-insert a new table of contents, it will **not** automatically update along with your content.
+
+##### Omitting Entries
+To omit an entry from being automatically generated in the contents table via the *Table of Contents* function, add a whitespace character (such as a space) in front of the heading you wish to omit. It will still render normally on the page.
+
+}}
+
+
+
+{{pageNumber,auto}}
+\page
+
+# Examples
+The following guide is going to present a number of examples that you can draw from, either when starting out using Homebrewery, or if you're familiar with how Homebrewery work, and are getting familiarized with these Soulbound-tuned changes. Not everything works out of the box with the normal Homebrewery functions, since those are tuned for D&D content, that follow different content structures *(such as NPC stat blocks)*. 
+
+
+
+## Headings
+The following are examples of the Soulbound-styled headings.
+:::::::::::::::::::::
+ # H1 Heading
+The h1 heading, used for chapters and spans both columns. The core book offers an alternate h1 header in white, and sometimes spans multiple lines — this is not yet replicated by this style layout. Only the above is available out of the box; centered and golden-colored. 
+
+ ## H2 Header
+The h2 heading, *generally* used to sub-divide the contents laid out by the chapter header. 
+
+
+ ### H3 Heading
+The h3 heading, often used as the archetype heading (see Archetype Example), or before a group of h4 items.
+
+#### H4 Heading
+The h4 heading is the basic element heading. Used for anything that portrays an element in the book; from equipment and talents, to spells and miracles.
+
+##### H5 Heading
+The h5 heading is generally when a h4 item can be further sub-divided or expanded upon; such as the species bonus sub-element, or a Talent granting specific abilities (see *Nav-League Member; Aethersight* from **Champions of Order**).
+
+- **List Item:** Represents items in a list. Such as when offering options for a player to choose from.
+
+___
+
+{{pageNumber,auto}}
+\page
+
+## NPC Stat Blocks
+The stat block grows with its content. It does not currently support spanning multiple columns (if brewing very large stat blocks).
+
+::
+{{note
+##### NPC Stat Block
+The structure of the NPC Stat blocks are important, and must adhere to the example below. The content can be what you like, but straying from the markdown structure is like to break its appearance.
+}}
+
+
+::
+{{monster,frame
+#### Stat block
+
+*Small fella, Minion*
+
+|  Average  |  Poor  |  Poor  |
+|:---------:|:------:|:------:|
+
+|  Armor  |  Toughness  |  Wounds  | Mettle |
+|:---------:|:------:|:------:|:----:|
+| 1 | 1 | — | — |
+
+{{
+**Speed:** :: Normal
+**Initiative:** :: 3
+**Natural Awareness:** :: 1
+**Skills:** :: Awareness (+1d6), Fortitude (+1d6), Weapon Skill (+1d6)
+}}
+
+{{header
+Traits
+}}
+
+{{
+**Encouraging Words:** This tiny critter believes in you. You can do the thing!
+}}
+
+{{header
+Attack
+}}
+
+{{
+**Trying Its Very Best:** Melee Attack (Average), 2d6, 1 + S Damage. *Crushing.*
+}}
+
+| Body | Mind | Soul |
+|:----:|:----:|:----:|
+| 1    | 1    | 2    |
+}}
+
+
+
+{{pageNumber,auto}}
+\page
+
+## Archetypes
+
+### Aethernaut Operator 
+___
+*“In the heart of the storm, where the ground quakes beneath the clash of titans, the Aethernaut Operator stands unyielding. They wield the might of innovation—a ground-bound colossus, forging a legacy with every echoing step.”*
+
+Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+
+Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
+
+{{quote
+“I am the indomitable guardian, a living testament to ingenuity — triumph forged from steel.”
+
+{{attribution Letva Gudmundr of the Brass Vanguard }}
+}}
+
+Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
+
+:
+{{archetype,order-5
+|  2  |  4  |  1  |
+|:---:|:---:|:---:|
+
+{{
+**Species:** Duardin (Kharadron Overlords)
+___
+**Core Skill:** Crafting
+___
+**Skills (9 XP):** Athletics, Awareness, Fortitude, Intimidation, Intuition, Medicine, Might, Reflexes, Weapon Skill
+___
+**Core Talents:** Endrineers Guild Member
+___
+**Talents (Choose 3):** Aethermatics Over Superstition, Bulwark, Hurler*, Iron Grip*, Pressing Attack*, The Bigger They Are
+___
+**Equipment:** : Aethernaut Operator’s Rig, Endrineer's Tools, a satchel filled with design blueprints, and 85 drops of Aqua Ghyranis. 
+}}
+}}
+
+:
+
+{{note
+##### Archetype Block
+The Archetype blocks requires a faction and a number to designate an archetype box for it. Factions as of writing are *order (1-8)*, *death (1-4)*, *destruction (1-4)* and *seraph (1)*. The order of content is also important (Attributes, **then** the text). Use the example in this document to write up your own.
+
+***Example:** An Archetype box for a Fyreslayer is designated as 'archetype,order-3'.*  
+
+**Note** that archetype blocks have varying heights. Pick your intended archetype block and design around that.
+
+##### White Backgrounds
+When using an image with a non-transparent white background, add "transparent" to the list of properties to the image (noted in { } brackets).
+}}
+
+{{float
+![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
+}}
+{{pageNumber,auto}}
+\page
+
+## Tables
+Tables are fairly simple constructs, and can be generated using Homebrewery; select *Tables* → *Table/Wide Table*. The auto-generated wide table uses standard annotation for a column-spanning table, but that won't be necessary with the **Soulbound** style sheet. The heading used for the table title dictates the size of the table.
+
+- A h4 heading (\#\#\#\#) denotes a wide table.
+- A h5 heading (\#\#\#\#\#) denotes a small table.
+::
+{{note
+##### Wide Table Behavior
+Content above a Wide table (and all other wide content, really) splits the columns above it as being a full page, rather than going down to the end, as seen here.
+}}
 
 
 
 
-  /*TABLES WITHIN NOTES*/
-  .note table tbody tr:nth-child(odd) {
-    background: #fff;
-  }
-
-  /* Removes Drop Caps */
-  .page h1 + p:first-letter {
-    all: unset;
-  }
-
-  /* Removes Drop Caps */
-  & h1 + p:first-letter {
-    all: unset;
-  }
-  
-  & 
-  h1 + p,
-  h2 + p,
-  h3 + p,
-  h4 + p,
-  h5 + p {
-    margin-top: 0px;
-  }
 
 
 
-  & h1 {
-    font-family: "Friz Quadrata";
-    margin-bottom: 0.5cm;
-    color: #806b39;
-    font-size: 1.7cm;
-    line-height: 1.25cm;
-    border-top: 2px solid #806b39;
-    border-bottom: 2px solid #806b39;
-    text-transform: uppercase;
-    text-align: center;
-  }
+#### A Wide Table
+| Rating | Explanation | 
+|:--:|:-------|
+| Extraordinary  | You have an almost supernatural talent for the task.  |
+| Superb  | Few in all the realms can match your skill or ability. You are exceptional.  |
+| Great  | You excel at the task.  |
+| Good  | You are well-trained and have a natural gift for the task.  |
+| Average  | You have some training or natural affinity in that area.  |
+| Poor  | You are inexperienced or particularly inept.  |
 
-  & h2 {
-    color: #806b39;
-    font-family: "Friz Quadrata";
-    font-size: 0.75cm;
-    border-bottom: 2px solid #806b39;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    + p {
-      margin-top: 5px;
-    }
-  }
+##### A Normal Table
+| Rating | Explanation | 
+|:--:|:-------|
+| Extraordinary  | You have an almost supernatural talent for the task.  |
+| Superb  | Few in all the realms can match your skill or ability. You are exceptional.  |
+| Great  | You excel at the task.  |
+| Good  | You are well-trained and have a natural gift for the task.  |
+| Average  | You have some training or natural affinity in that area.  |
+| Poor  | You are inexperienced or particularly inept. |
 
-  & * + h3 {
-    margin-top: 0.325cm;
-  }
+{{pageNumber,auto}}
+\page
 
-  & h3 {
-    color: #183052;
-    font-size: 0.75cm;
-    border-bottom: none;
-  }
+## Frontpages
+When working with the frontpage, add \{\{ frontCover \}\} to the page. It adds the **Soulbound** logo and modifies both the h1- and h2 headings when on the same page. 
+- **h1.** The text is added below the **Soulbound** logo.
+- **h2.** The text is added as the frontpage footer.
 
-  & h4 {
-    color: #183052;
-    font-size: 0.65cm;
-    border-bottom: none;
-    text-transform:lowercase;
-  }
-  
-  & h5 {
-    font-family: "MrEavesRemake";
-    font-size: 0.50cm;
-    text-transform:lowercase;
-  }
+#### Adventure
+The frontpage block can be expanded with the module tag, doing so adds the black panes to the top and bottom of the frontpage; \{\{ frontCover,module \}\}.
+:
+{{note
+##### Limited Generation Support
+It is possible to generate a frontpage using Homebrewery functions; *PHB* → *Front Page Cover*, but it is fundamentally designed with D&D in mind and you'll have a bit of manual cleanup to do because of that.
+}}
 
-  & p {
-    font-size: .36cm;
-    text-align: justify;
-    font-family: "Adobe Garamond Pro";
-    line-height: .46cm;
-  }
 
-  & p + p::before {
-    content: "\A";
-  }
+\column
 
-  & p + p {
-    text-indent: 0em;
-    white-space: pre-wrap;
-  }
-  
-  /* NOTE BLOCK */
+## Chapter Banners
+Chapter banners lets you add an additional level of both detail and organisation to your pages.
 
-  & .note {
-    position: relative;
-    color: #faffff;
-    background-color: black;
-    border-image: none;
-    padding: 0.4cm 0.3cm 0.4cm 0.3cm;
-    border: 3px inset #b5a55f;
-    box-shadow: none;
-    margin-bottom:30px;
-    margin-top: 45px;
-    
-    &::before {
-      position: absolute;
-      content: ' ';
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/notes/note--top.png?raw=true);
-      width: 325px;
-      height: 94px;
-      top: -63px;
-      left: -40px;
-      transform: scale(0.65);
-    }
-    
-    &::after {
-      position: absolute;
-      content: ' ';
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/notes/note--bottom.png?raw=true);
-      width: 325px;
-      height: 94px;
-      bottom: -63px;
-      left: 20px;
-      transform: scale(0.65);
-    }
+There's a total of 11 banners, noted as banner-1 through banner-11.
 
-    & h5 {
-      color: #806b39;
-      margin-top: 0.3cm;
-      margin-bottom: 0.3cm;
-      font-size: 0.5cm;
-      text-align: center;
-    }
 
-    & p {
-      font-size: 0.4cm;
-    }
-  }
 
-  /* ////// TABLE START ////// */
-  & h4:has(+table) {
-      column-span: all;
-      
-      & +table {
-        column-span: all;
-      }
-  }
-    
-  & h5:has(+table) {
-      column-span: none;
-    }
+{{banner,banner-1
+  Examples::1
+}}
+:::::::::::::::::::::::::::::::::
+# Credit
 
-  & h4:has(+table),
-    h5:has(+table) {
-    position: relative;
-    color: white;
-    background-image: linear-gradient(to right, #325277, #2e496c, #2a4062, #263757, #212f4d, #212f4d, #212f4d, #212f4d, #263757, #2a4062, #2e496c, #325277);
-    text-align: center;
-    font-size: 0.45cm;
-    font-weight: 100;
-    letter-spacing: 0.02cm;
-    padding: .3cm .25cm;
-    margin-top: 20px !important;
-    font-family: "MrEavesRemake";
-    text-transform:lowercase;
-    margin-bottom: 0px;
-    border: none;
-    line-height: inherit;
-    
-    &::before {
-      content: ' ';
-      position: absolute;
-      display:block;
-      top:-0.51cm;;
-      left:-0.27cm;
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
-      background-size: .5cm 1cm;
-      background-repeat: none;
-      width: .5cm;
-      height: 1cm;
-      text-align: center;
-    }
-  
-    &::after {
-      content: ' ';
-      position: absolute;
-      background-repeat: none;
-      top:-0.51cm;;
-      right:-0.23cm;
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
-      background-size: .5cm 1cm;
-      width: .5cm;
-      height: 1cm;
-      text-align: center;
-    }
-    
-    & +table {
-      border: 1px solid #806b39;
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
-      margin-top: 0px;
-      
-      & th,td {
-        padding: 10px 5px;
-        vertical-align: middle;
-      }
-      
-      & th:not(:last-child) {
-        border-right: 1px solid #806b39;
-      }
-      
-      & td {
-        border-top: 1px solid #806b39;
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
-      }
-      
-      & tr:nth-child(even) td {
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true); 
-      }
-      
-      
-      
-      & td:not(:last-child) {
-        border-right: 1px solid #806b39;
-      }
-    }
-  }
+### Bad Moon Rae
+***Huge*** thanks to *Bad Moon Rae* for helping me get ahold of — and editing — the graphics for this project. This couldn't have happened otherwise.
 
-  /* ////// STAT BLOCK START ////// */
+##### Artwork
+Artwork for the frontpage and the archetype example are both AI generated by MidJourney.
 
-  & .monster.frame::before {
-    content: ' ';
-    position: absolute;
-    top:-0.51cm;;
-    left:-0.27cm;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
-    background-size: .5cm 1cm;
-    width: .5cm;
-    height: 1cm;
-    text-align: center;
-  }
-  
-  & .monster.frame::after {
-    content: ' ';
-    position: absolute;
-    top:-0.51cm;;
-    right:-0.27cm;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/generic-graphics/table-star--corner.png?raw=true);
-    background-size: .5cm 1cm;
-    width: .5cm;
-    height: 1cm;
-    text-align: center;
-  }
-  
-  & .monster.frame {
-  & table:first-of-type {
-    & th {
-      line-height:30px;
-    }
-  }
-  
-  & table:first-of-type th:nth-child(1)::before {
-    content: ' ';
-    position: absolute;
-    top: 65px;
-    left: 10px;
-    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--melee.png?raw=true');
-    background-size: 18px 18px;
-    width: 18px;
-    height: 18px;
-    }
-  & table:first-of-type th:nth-child(2)::before {
-    content: ' ';
-    position: absolute;
-    top: 63px;
-    left: 125px;
-    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--accuracy.png?raw=true');
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
-    }
-  & table:first-of-type th:nth-child(3)::before {
-    content: ' ';
-    position: absolute;
-    top: 65px;
-    left: 235px;
-    background-image: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/combat-icons/archetype-symbol--defence.png?raw=true');
-    background-size: 18px 18px;
-    width: 18px;
-    height: 18px;
-    }
-  }
+## Author's Note
+Hi. This is Kirtanei. I hope this styleguide will prove useful in your homebrewing endeavors. Feel free to reach out to me on Discord for any changes and adjustments to this, or open up issues on Github.
 
-  & .monster.frame {
-    box-shadow: none;
-    background: none;
-    padding: 0;
-    border: 1px solid #806b39;
-    margin-top: 20px;
-    
-    
-    & p {
-      text-align: left;
-    }
-    
-    & p, th, td {
-      font-family: 'Minion Pro';
-      font-size: 0.35cm;
-      letter-spacing: 0.006cm;
-      vertical-align:middle;
-    }
-    
-    & .block {
-      margin-top:0;
-    }
-    
-    & h4 {
-      color: white;
-      background-image: linear-gradient(to right, #325277, #2e496c, #2a4062, #263757, #212f4d, #212f4d, #212f4d, #212f4d, #263757, #2a4062, #2e496c, #325277);
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 0.45cm;
-      font-weight: 100;
-      letter-spacing: 0.02cm;
-      padding: .2cm .25cm .2cm .25cm
-      
-    }
-    
-    & h4+p {
-    font-family: "Joan";
-    font-size: .33cm;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    text-transform: italic;
-    border-bottom: 1px solid #806b39;
-    }
-    & table {
-      table-layout: fixed;
-    }
-    & p+table {
-    margin-top: 0;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
-    font-weight: normal !important;
-    border-top: none;
-    
-    & th {
-      font-weight: normal;
-      }
-    }
-    
-  
-    
-    & table {
-    border-top: 1px solid #806b39;
-    background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
-    }
-    & th:not(:last-child) {
-      border-right: 1px solid #806b39;
-    }
-    
-    & td {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
-      border-top: 1px solid #806b39;
-    }
-    
-    & td:not(:last-child) {
-      border-right: 1px solid #806b39;
-    }
-    
-    & table+div {
-    }
-    
-    & .block {
-      border-top: 1px solid #806b39; 
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--light-grey.jpg?raw=true);
-      padding: 0.2cm 0.15cm 0.2cm 0.15cm;
-      
-      &.header {
-        & p {
-          font-weight: bold;
-        }
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/stat-blocks/statblock-grainy--dark-grey.jpg?raw=true);
-        text-transform: uppercase;
-      }
-    }
-  }
-  
+{{pageNumber,auto}}
+\page
+{{pageNumber,auto}}
 
-  
-  /* QUOTE BLOCK */
-  & .quote {
-     & p {
-      color: #183052;
-      font-weight: bold;
-     }
-     & p:first-child::first-line {
-      font-size: inherit;
-      font-variant: none;
-      font-style: italic;
-     }
-     
-     & .attribution {
-      color: #183052;
-     }
-  }
-  
-  /* ARCHETYPE BLOCK */
-  & .archetype {
-      width:120%;
-      height:382px;
-      margin:0 -31px;
-    
-    & table {
-      margin-top:0.9cm;
-      white-space: pre;
-      margin-left:auto;
-      margin-right:auto;
-      table-layout: fixed;
-      width:67%;
-      
-      & th {
-        font-size: .7cm;
-      }
-    }
-    
-    & .block {
-      margin-bottom:auto;
-      font-size: .30cm;
-      text-align: justify;
-      padding-top:  .9cm;
-      margin-left:9%;
-      margin-right:9%;
-      width:82%;
-      height:75%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      
-      & p {
-        font-size: .34cm;
-        line-height: 1.1em;
-        text-align: left;
-      }
-    }
-    
+# Submitting Issues
 
-/* 
-////////////////////////////
-//// CHAMPIONS OF ORDER //// 
-////////////////////////////
-*/
-    /*FREE PEOPLE*/
-    &.order-1 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-1--FreePeoples.png?raw=true);
-      background-size: 100%;
-      height:340px;
-      
-      & table {
-        width:67%;
-      }
-      
-      & .block {
-        padding-top:45px;
-        height:73%;
-      }
-    }
-    
-    /*DAUGHTERS OF KHAINE*/
-    &.order-2 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-2--DaughtersOfKhaine.png?raw=true);
-      background-size: 100%;
-      height:382px;
-      
-      & table {
-        width: 72%;
-        margin-top:25px; 
-      }
-      
-      & .block {
-        padding-top:50px;
-        height:75%;
-        margin-top:20px;
-        margin-left:7%;
-        margin-right:7%;
-        width:87%;
-      }
-    }
-    
-    /*FYRESLAYERS*/
-    &.order-3 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-3--Fyreslayers.png?raw=true);
-      background-size: 100%;
-      height:382px;
-      
-      & table {
-        width: 69%;
-        margin-top:40px; 
-      }
-      
-      & .block {
-        padding-top: 35px;
-        height: 70%;
-        margin-top: 13px;
-        margin-left: 7%;
-        margin-right: 7%;
-        width: 87%;
-      }
-    }
-    
-    /*IDONETH DEEPKIN*/
-    &.order-4 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-4--IdonethDeepkin.png?raw=true);
-      background-size: 100%;
-      height:382px;
-      
-      & table {
-        width: 69%;
-        margin-top:38px; 
-      }
-      
-      & .block {
-        padding-top: 40px;
-        height: 70%;
-        margin-top: 13px;
-        margin-left: 7%;
-        margin-right: 7%;
-        width: 87%;
-      }
-    }
-    
-    /*KHARADRON OVERlORDS*/
-    &.order-5 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-5--KharadronOverlords.png?raw=true);
-      background-size: 100%;
-      height:340px;
-      
-      & table {    
-      width: 67%;
-      margin-top: 30px;
-      margin-left: 66px;
-      }
-      
-      & .block {
-        padding-top: 47px;
-        height: 78%;
-        margin-top: 13px;
-        margin-left: 7%;
-        margin-right: 7%;
-        width: 87%;
-      }
-    }
-    
-    /*STORMCAST ETERNALS*/
-    &.order-6 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-6--StormcastEternals.png?raw=true);
-      background-size: 100%;
-      height:355px;
-      
-      & table {
-        width: 71%;
-        margin-top:42px; 
-      }
-      
-      & .block {
-        padding-top: 38px;
-        height: 73%;
-        margin-top: 13px;
-        margin-left: 7%;
-        margin-right: 7%;
-        width: 87%;
-      }
-    }
-    
-    /*SYLVANETH*/
-    &.order-7 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-7--Sylvaneth.png?raw=true);
-      background-size: 100%;
-      height:355px;
-      
-      & table {
-        width: 69%;
-        margin-top:20px; 
-      }
-      
-      & .block {
-        padding-top: 60px;
-        height: 79%;
-        margin-top: 13px;
-        margin-left: 9%;
-        margin-right: 9%;
-        width: 87%;
-      }
-    }
-    
-    /*LUMINETH REALM-LORDS*/
-    &.order-8 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/order/Order-8--LuminethRealm-Lords.png?raw=true);
-      background-size: 100%;
-      height:345px;
-      
-      & table {
-        width: 69%;
-        margin-top:37px; 
-      }
-      
-      & .block {
-        padding-top: 45px;
-        height: 74%;
-        margin-top: 13px;
-        margin-left: 8%;
-        margin-right: 8%;
-        width: 87%;
-      }
-    }
-/* 
-////////////////////////////
-//// CHAMPIONS OF DEATH //// 
-////////////////////////////
-*/
-    /*FLESH-EATER COURTS*/
-    &.death-1 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-1--Flesh-EaterCourts.png?raw=true);
-      background-size: 100%;
-      height:356px;
-      
-      & table {
-        width:68%;
-        margin-top:39px; 
-      }
-      
-      & .block {
-        padding-top:40px;
-        height:70%;
-        margin-top:20px;
-        margin-left:8%;
-        margin-right:8%;
-        width:87%;
-      }
-    }
-    
-    /*NIGHTHAUNT*/
-    &.death-2 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-2--Nighthaunt.png?raw=true);
-      background-size: 100%;
-      height:352px;
-      & table {
-        width: 68%;
-        margin-top: 35px;
-        margin-left: 62px;
-      }
-      
-      & .block {
-        padding-top:40px;
-        height:70%;
-        margin-top:20px;
-        margin-left:7%;
-        margin-right:7%;
-        width:87%;
-      }
-    }
-    
-    /*OSSIARCH BONEREAPERS*/
-    &.death-3 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-3--OssiarchBonereapers.png?raw=true);
-      background-size: 100%;
-      height:351px;
-      & table {
-        width: 69%;
-        margin-top:30px; 
-      }
-      
-      & .block {
-        padding-top: 35px;
-        height: 70%;
-        margin-top: 13px;
-        margin-left: 7%;
-        margin-right: 7%;
-        width: 87%;
-      }
-    }
-    
-    /*SOULBLIGHT GRAVELORDS*/
-    &.death-4 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/death/Death-4--SoulblightGravelords.png?raw=true);
-      background-size: 100%;
-      height:345px;
-      
-      & table {
-        width: 66%;
-        margin-top:22px; 
-      }
-      
-      & .block {
-        padding-top: 50px;
-        height: 74%;
-        margin-top: 13px;
-        margin-left: 8%;
-        margin-right: 8%;
-        width: 87%;
-      }
-    }
-/* 
-//////////////////////////////////
-//// CHAMPIONS OF DESTRUCTION //// 
-//////////////////////////////////
-*/
+## Github
+If you have any issues with this Homebrewery project, have suggestions or any additional details to submit requests for, you can head to its [Github Page](https://github.com/Kirtanei/soulbound-styleguide/) and open an Issue there as well. It helps me keep track of new features and fixes.
 
-    /*BONESPLITTERS*/
-    &.destruction-1 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-1--Bonesplitterz.png?raw=true);
-      background-size: 100%;
-      height:439px;
-      
-      & table {
-        width:68%;
-        margin-top:35px; 
-        margin-left:63px;
-      }
-      
-      & .block {
-        padding-top:50px;
-        height:72%;
-        margin-top:20px;
-        margin-left:8%;
-        margin-right:8%;
-        width:87%;
-      }
-    }
-    
-    /*IRONJAWZ*/
-    &.destruction-2 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-2--Ironjawz.png?raw=true);
-      background-size: 100%;
-      height:389px;
-      & table {
-        width: 66%;
-        margin-top: 28px;
-      }
-      
-      & .block {
-        padding-top:40px;
-        height:70%;
-        margin-top:20px;
-        margin-left:9%;
-        margin-right:9%;
-        width:82%;
-      }
-    }
-    
-    /*KRULEBOYZ*/
-    &.destruction-3 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-3--Kruleboyz.png?raw=true);
-      background-size: 100%;
-      height:384px;
-      & table {
-        width: 68%;
-        margin-top:26px; 
-      }
-      
-      & .block {
-        padding-top: 40px;
-        height: 71%;
-        margin-top: 13px;
-        margin-left: 9%;
-        margin-right: 7%;
-        width: 84%;
-      }
-    }
-    
-    /*OGOR MAWTRIBES*/
-    &.destruction-4 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-4--OgorMawtribes.png?raw=true);
-      background-size: 100%;
-      height:387px;
-      
-      & table {
-        width: 65%;
-        margin-top: 27px;
-        margin-right: 65px;
-      }
-      
-      & .block {
-        padding-top: 50px;
-        height: 72%;
-        margin-top: 13px;
-        margin-left: 10%;
-        margin-right: 9%;
-        width: 82%;
-      }
-    }
-    
-    /*GLOOMSPITE GITZ*/
-    &.destruction-5 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/destruction/Destruction-5--GloomspiteGitz.png?raw=true);
-      background-size: 100%;
-      height:377px;
-      
-      & table {
-        width: 66%;
-        margin-top: 47px;
-        margin-right: 63px;
-      }
-      
-      & .block {
-        padding-top: 45px;
-        height: 72%;
-        margin-top: 13px;
-        margin-left: 10%;
-        margin-right: 9%;
-        width: 82%;
-      }
-    }
-    
-    /*SERAPHON*/
-    &.seraph-1 {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/block-graphics/archetypes/seraphon/Seraphon-1--Seraphon.png?raw=true);
-      background-size: 100%;
-      height:325px;
-      
-      & table {
-        width: 66%;
-        margin-top: 23px;
-      }
-      
-      & .block {
-        padding-top: 45px;
-        height: 76%;
-        margin-top: 13px;
-        margin-left: 10%;
-        margin-right: 9%;
-        width: 82%;
-      }
-    }
-  }
-  
-  /* Banners */
-  
-  & .banner {
-    position: absolute;
-    top: -1px;
-    right: 0;
-    width: 60%;
-    margin-top:0px;
-    
-    
-    &::before {
-      position: absolute;
-      top: -15px;
-      right: 10px;
-      content: ' ';
-      display: block;
-      width: 74px;
-      height: 78px;
-      transform: rotateX(180deg);
-      background-size: contain;
-    }
-    
-    &.banner-1::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0001_Green.png?raw=true);
-    }
-    &.banner-2::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0002_Navy.png?raw=true);
-    }
-    &.banner-3::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0003_Purple.png?raw=true);
-    }
-    &.banner-4::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0004_Blue.png?raw=true);
-    }
-    &.banner-5::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0005_Crimson.png?raw=true);
-    }
-    &.banner-6
-    {
-      & dd {
-        color: #806b39;
-      }
-      &::before {
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0006_White.png?raw=true);
-      }
-    }
-    &.banner-7::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0007_Pink.png?raw=true);
-    }
-    &.banner-8::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0008_Orange.png?raw=true);
-    }
-    &.banner-9::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0009_Turquoise.png?raw=true);
-    }
-    
-    &.banner-10
-    {
-      & dd {
-        color: #806b39;
-      }
-      &::before {
-        background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0010_Silver.png?raw=true);
-      }
-    }
-    
-    &.banner-11::before {
-      background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/banners/Soulbound-Chapter-Points_0011_Black.png?raw=true);
-    }
-    
-    & dl {
-      position: relative;
-      
-      & dt {
-        position: absolute;
-        top: 20px;
-        right: 72px;
-        font-family: "MrEavesRemake";
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #806b39;
-        text-align: right;
-        direction: rtl;
-      }
-      & dd {
-        position: absolute;
-        top:11px;
-        right:40px;
-        font-family: "Fritz Quadrata";
-        font-size: .80cm;
-        font-weight: bold;
-        color: white;
-      }
-    }
-  }
-
-  .footnote {
-    bottom: 40px;
-  }
-  
-    /*DROP CAP*/
-  h1 + p::first-letter {
-    background-image: unset;
-    color: black;
-  }
-}
+## Discord
+The above is the preferred method for helping me keep track of the requests, that said you're welcome to reach out to me as well in the ["Age of Soulbound"](https://discord.gg/GvKVh4CApk) Discord server.
