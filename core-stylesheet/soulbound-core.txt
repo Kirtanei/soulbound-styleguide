@@ -81,7 +81,7 @@
       /* TextDetail from 'runebrush.pa-sy.com/warscroll' */
       background-image: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/scratched-surface.jpg?raw=true);
       background-size: 50px 50px;
-      -webkit-text-stroke: none;
+      -webkit-text-stroke: initial;
     }
     & h2 {
       border: none;
