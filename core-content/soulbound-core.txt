@@ -6,7 +6,7 @@
 
  ## Get started on your Soulbound content with Homebrewery
 
-![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:0,left:0,height:100%}
+![background image](https://i.imgur.com/RTdmxMM.jpeg){position:absolute,bottom:0,left:0,height:100%}
 
 \page
 
@@ -17,7 +17,7 @@
 
  ## Get started on your Soulbound content with Homebrewery
 
-![background image](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/Scribe.png?raw=true){position:absolute,bottom:-230px,left:0,width:100%;}
+![background image](https://i.imgur.com/RTdmxMM.jpeg){position:absolute,bottom:-230px,left:0,width:100%;}
 
 \page
 
@@ -231,6 +231,7 @@ When using an image with a non-transparent white background, add "transparent" t
 ![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
 
 {{pageNumber,auto}}
+
 \page
 
 ## Tables
