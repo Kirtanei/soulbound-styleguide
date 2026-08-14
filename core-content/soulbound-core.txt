@@ -226,6 +226,11 @@ The Archetype blocks requires a faction and a number to designate an archetype b
 
 ##### White Backgrounds
 When using an image with a non-transparent white background, add "transparent" to the list of properties to the image (noted in { } brackets).
+
+##### Image Borders
+When using a non-transparent image that needs a faction border, add "image-border" and the relevant faction class to the image properties. The image border assets are selected from Kenney's *Fantasy UI Borders* pack, licensed CC0.
+
+***Example:** A Fyreslayer image border is designated as 'image-border,order-3'.*
 }}
 
 ![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true) {position:absolute,bottom:-00px,right:5px,width:475px,z-index:100}
