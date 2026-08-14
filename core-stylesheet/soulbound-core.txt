@@ -1209,13 +1209,13 @@
   & img.image-border {
     --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-1.png);
     --SB_ImageBorder_Width: 18px;
-    border: var(--SB_ImageBorder_Width) solid transparent;
+    border: 1px solid transparent;
     border-image-source: var(--SB_ImageBorder_Source);
     border-image-slice: 32;
     border-image-width: var(--SB_ImageBorder_Width);
     border-image-outset: 0;
     border-image-repeat: stretch;
-    background: #f4efe1;
+    background: transparent;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
   }
