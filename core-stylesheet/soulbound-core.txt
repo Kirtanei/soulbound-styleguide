@@ -1207,7 +1207,7 @@
 
   /* IMAGE BORDERS */
   & img.image-border {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-1.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-1.png);
     --SB_ImageBorder_Width: 18px;
     border: var(--SB_ImageBorder_Width) solid transparent;
     border-image-source: var(--SB_ImageBorder_Source);
@@ -1221,75 +1221,75 @@
   }
   
   & img.image-border.order-1 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-1.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-1.png);
   }
   
   & img.image-border.order-2 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-2.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-2.png);
   }
   
   & img.image-border.order-3 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-3.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-3.png);
   }
   
   & img.image-border.order-4 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-4.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-4.png);
   }
   
   & img.image-border.order-5 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-5.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-5.png);
   }
   
   & img.image-border.order-6 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-6.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-6.png);
   }
   
   & img.image-border.order-7 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-7.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-7.png);
   }
   
   & img.image-border.order-8 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/order-8.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/order-8.png);
   }
   
   & img.image-border.death-1 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/death-1.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/death-1.png);
   }
   
   & img.image-border.death-2 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/death-2.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/death-2.png);
   }
   
   & img.image-border.death-3 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/death-3.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/death-3.png);
   }
   
   & img.image-border.death-4 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/death-4.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/death-4.png);
   }
   
   & img.image-border.destruction-1 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/destruction-1.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/destruction-1.png);
   }
   
   & img.image-border.destruction-2 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/destruction-2.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/destruction-2.png);
   }
   
   & img.image-border.destruction-3 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/destruction-3.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/destruction-3.png);
   }
   
   & img.image-border.destruction-4 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/destruction-4.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/destruction-4.png);
   }
   
   & img.image-border.destruction-5 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/destruction-5.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/destruction-5.png);
   }
   
   & img.image-border.seraph-1 {
-    --SB_ImageBorder_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-borders/kenney-fantasy-ui/seraph-1.png?raw=true);
+    --SB_ImageBorder_Source: url(https://raw.githubusercontent.com/Kirtanei/soulbound-styleguide/agent/faction-image-borders/graphics/image-borders/kenney-fantasy-ui/seraph-1.png);
   }
   .transparent {
     mix-blend-mode:darken;
