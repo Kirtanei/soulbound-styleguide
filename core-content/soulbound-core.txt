@@ -234,6 +234,14 @@ When using an image with a non-transparent white background, add "transparent" t
 
 \page
 
+## Faction Image Borders
+
+Image frames are only for non-transparent images. Use the same faction keys as archetype blocks: *order (1-8)*, *death (1-4)*, *destruction (1-5)* and *seraph-1*.
+
+{{imageFrame,order-3
+![](https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/misc/AethernautOperator.png?raw=true){width:300px}
+}}
+
 ## Tables
 Tables are fairly simple constructs, and can be generated using Homebrewery; select *Tables* → *Table/Wide Table*. The auto-generated wide table uses standard annotation for a column-spanning table, but that won't be necessary with the **Soulbound** style sheet. The heading used for the table title dictates the size of the table.
 

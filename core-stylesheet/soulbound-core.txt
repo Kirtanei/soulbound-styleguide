@@ -669,6 +669,138 @@
       color: #183052;
      }
   }
+
+  /* IMAGE FRAME */
+  & .imageFrame {
+    --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-000.png?raw=true);
+    --SB_ImageFrame_Slice: 24;
+    --SB_ImageFrame_Size: 0.34cm;
+    --SB_ImageFrame_Outset: 0.12cm;
+    --SB_ImageFrame_Filter: sepia(0.5) saturate(1.45) brightness(0.86) contrast(1.25);
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0.28cm 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    line-height: 0;
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    &::before {
+      inset: calc(var(--SB_ImageFrame_Outset) * -1);
+      z-index: 1;
+      border: var(--SB_ImageFrame_Size) solid transparent;
+      border-image-source: var(--SB_ImageFrame_Source);
+      border-image-slice: var(--SB_ImageFrame_Slice);
+      border-image-width: var(--SB_ImageFrame_Size);
+      border-image-outset: 0;
+      border-image-repeat: stretch;
+      filter: var(--SB_ImageFrame_Filter);
+    }
+    
+    &::after {
+      inset: 0;
+      z-index: -1;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: 0 0.06cm 0.18cm rgba(0, 0, 0, 0.28);
+    }
+
+    & p {
+      display: inline-block;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0;
+      line-height: 0;
+    }
+    
+    & img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    
+    &.order-1 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-000.png?raw=true);
+    }
+    
+    &.order-2 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-002.png?raw=true);
+    }
+    
+    &.order-3 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-003.png?raw=true);
+    }
+    
+    &.order-4 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-021.png?raw=true);
+    }
+    
+    &.order-5 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-018.png?raw=true);
+    }
+    
+    &.order-6 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-014.png?raw=true);
+    }
+    
+    &.order-7 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-027.png?raw=true);
+    }
+    
+    &.order-8 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-028.png?raw=true);
+    }
+    
+    &.death-1 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-023.png?raw=true);
+    }
+    
+    &.death-2 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-005.png?raw=true);
+    }
+    
+    &.death-3 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-029.png?raw=true);
+    }
+    
+    &.death-4 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-030.png?raw=true);
+    }
+    
+    &.destruction-1 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-016.png?raw=true);
+    }
+    
+    &.destruction-2 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-017.png?raw=true);
+    }
+    
+    &.destruction-3 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-020.png?raw=true);
+    }
+    
+    &.destruction-4 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-022.png?raw=true);
+    }
+    
+    &.destruction-5 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-025.png?raw=true);
+    }
+    
+    &.seraph-1 {
+      --SB_ImageFrame_Source: url(https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-031.png?raw=true);
+    }
+  }
   
   /* ARCHETYPE BLOCK */
   & .archetype {
