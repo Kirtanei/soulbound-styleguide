@@ -673,10 +673,13 @@
   /* IMAGE FRAME */
   & .imageFrame {
     --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/nicubunu-golden-emerald-border/golden-emerald-border.svg?raw=true');
-    --SB_ImageFrame_Slice: 80;
-    --SB_ImageFrame_Width: 0.32cm;
-    --SB_ImageFrame_Outset: 0.08cm;
-    --SB_ImageFrame_Repeat: stretch;
+    --SB_ImageFrame_Border_Source: var(--SB_ImageFrame_Source);
+    --SB_ImageFrame_Border_Slice: 32;
+    --SB_ImageFrame_Border_Width: 0.34cm;
+    --SB_ImageFrame_Border_Outset: 0.02cm;
+    --SB_ImageFrame_Border_Repeat: stretch;
+    --SB_ImageFrame_Overlay_Source: none;
+    --SB_ImageFrame_Frame_Inset: -0.08cm;
     --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(255, 245, 203, 0.12), rgba(44, 30, 14, 0.22));
     --SB_ImageFrame_Shadow: 0 0.08cm 0.2cm rgba(0, 0, 0, 0.34);
     --SB_ImageFrame_Accent_Image: none;
@@ -691,21 +694,34 @@
     max-width: 100%;
     margin: 0.28cm 0;
     padding: 0;
-    border: var(--SB_ImageFrame_Width) solid transparent;
-    border-image-source: var(--SB_ImageFrame_Source);
-    border-image-slice: var(--SB_ImageFrame_Slice);
-    border-image-repeat: var(--SB_ImageFrame_Repeat);
-    border-image-outset: var(--SB_ImageFrame_Outset);
+    border: var(--SB_ImageFrame_Border_Width) solid transparent;
+    border-image-source: var(--SB_ImageFrame_Border_Source);
+    border-image-slice: var(--SB_ImageFrame_Border_Slice);
+    border-image-repeat: var(--SB_ImageFrame_Border_Repeat);
+    border-image-outset: var(--SB_ImageFrame_Border_Outset);
     background: var(--SB_ImageFrame_Backdrop);
     box-shadow: var(--SB_ImageFrame_Shadow);
     line-height: 0;
     
-    &::before {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       pointer-events: none;
-      inset: var(--SB_ImageFrame_Accent_Inset);
+    }
+    
+    &::before {
+      inset: var(--SB_ImageFrame_Frame_Inset);
       z-index: 2;
+      background-image: var(--SB_ImageFrame_Overlay_Source);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+    
+    &::after {
+      inset: var(--SB_ImageFrame_Accent_Inset);
+      z-index: 3;
       background-image: var(--SB_ImageFrame_Accent_Image);
       background-repeat: no-repeat;
       background-size: var(--SB_ImageFrame_Accent_Size);
@@ -734,49 +750,51 @@
     
     &.order-1 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/nicubunu-golden-emerald-border/golden-emerald-border.svg?raw=true');
-      --SB_ImageFrame_Slice: 80;
-      --SB_ImageFrame_Width: 0.28cm;
+      --SB_ImageFrame_Border_Slice: 80;
+      --SB_ImageFrame_Border_Width: 0.28cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(255, 244, 190, 0.2), rgba(52, 79, 92, 0.18));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.18cm rgba(41, 54, 70, 0.34), 0 0 0.08cm rgba(205, 178, 73, 0.32);
     }
     
     &.order-2 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/shadow3097-window-frame/selected-transparent-center/window_red2.png?raw=true');
-      --SB_ImageFrame_Slice: 110;
-      --SB_ImageFrame_Width: 0.34cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(222, 170, 111, 0.18), rgba(96, 14, 41, 0.28));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.18cm rgba(72, 8, 27, 0.4), 0 0 0.08cm rgba(176, 75, 66, 0.3);
     }
     
     &.order-3 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/kenney-fantasy-ui-borders/double-transparent-center/panel-transparent-center-014.png?raw=true');
-      --SB_ImageFrame_Slice: 31;
-      --SB_ImageFrame_Width: 0.42cm;
+      --SB_ImageFrame_Border_Slice: 31;
+      --SB_ImageFrame_Border_Width: 0.42cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(236, 141, 39, 0.24), rgba(83, 28, 7, 0.32));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.2cm rgba(91, 32, 7, 0.45), 0 0 0.09cm rgba(237, 132, 43, 0.36);
     }
     
     &.order-4 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/shadow3097-window-frame/selected-transparent-center/window_blue.png?raw=true');
-      --SB_ImageFrame_Slice: 104;
-      --SB_ImageFrame_Width: 0.32cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(202, 230, 228, 0.2), rgba(20, 84, 104, 0.28));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.2cm rgba(13, 62, 83, 0.38), 0 0 0.09cm rgba(117, 176, 190, 0.32);
     }
     
     &.order-5 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/screaming-brain-portrait-frames/selected-transparent-center/metal-gold-f.png?raw=true');
-      --SB_ImageFrame_Slice: 70;
-      --SB_ImageFrame_Width: 0.42cm;
+      --SB_ImageFrame_Border_Slice: 32;
+      --SB_ImageFrame_Border_Width: 0.42cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(221, 181, 87, 0.2), rgba(51, 72, 78, 0.32));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.18cm rgba(25, 51, 61, 0.38), 0 0 0.1cm rgba(210, 175, 80, 0.34);
     }
     
     &.order-6 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/gargargarrick-blue-decorated-window/selected-transparent-center/blue-decorated-window.png?raw=true');
-      --SB_ImageFrame_Slice: 118 112 52 112;
-      --SB_ImageFrame_Width: 0.5cm;
-      --SB_ImageFrame_Outset: 0.1cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Accent_Inset: -0.7cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(231, 204, 104, 0.18), rgba(13, 39, 57, 0.34));
       --SB_ImageFrame_Shadow: 0 0.07cm 0.22cm rgba(10, 31, 47, 0.46), 0 0 0.1cm rgba(209, 189, 86, 0.34);
@@ -784,8 +802,9 @@
     
     &.order-7 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/shadow3097-window-frame/selected-transparent-center/window_green.png?raw=true');
-      --SB_ImageFrame_Slice: 104;
-      --SB_ImageFrame_Width: 0.34cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Accent_Inset: -0.55cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(192, 174, 94, 0.16), rgba(34, 86, 42, 0.32));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.2cm rgba(25, 69, 32, 0.4), 0 0 0.08cm rgba(112, 153, 79, 0.3);
@@ -797,64 +816,65 @@
     
     &.order-8 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/nicubunu-golden-border/golden-border.svg?raw=true');
-      --SB_ImageFrame_Slice: 80;
-      --SB_ImageFrame_Width: 0.28cm;
+      --SB_ImageFrame_Border_Slice: 80;
+      --SB_ImageFrame_Border_Width: 0.28cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(245, 239, 207, 0.22), rgba(74, 130, 132, 0.22));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.18cm rgba(58, 102, 111, 0.34), 0 0 0.08cm rgba(229, 218, 174, 0.34);
     }
     
     &.death-1 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/stumpystrust-fantasy-ui-box/selected-transparent-center/boxHover.png?raw=true');
-      --SB_ImageFrame_Slice: 34;
-      --SB_ImageFrame_Width: 0.5cm;
+      --SB_ImageFrame_Border_Slice: 28;
+      --SB_ImageFrame_Border_Width: 0.48cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(190, 70, 37, 0.18), rgba(36, 11, 12, 0.45));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.24cm rgba(28, 6, 7, 0.56), 0 0 0.1cm rgba(122, 41, 32, 0.34);
     }
     
     &.death-2 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/nicubunu-dark-border/dark-border.svg?raw=true');
-      --SB_ImageFrame_Slice: 50;
-      --SB_ImageFrame_Width: 0.3cm;
+      --SB_ImageFrame_Border_Slice: 50;
+      --SB_ImageFrame_Border_Width: 0.3cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(171, 221, 216, 0.16), rgba(18, 62, 69, 0.38));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.22cm rgba(9, 37, 43, 0.5), 0 0 0.1cm rgba(121, 189, 184, 0.32);
     }
     
     &.death-3 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/screaming-brain-portrait-frames/selected-transparent-center/stone-bone-a.png?raw=true');
-      --SB_ImageFrame_Slice: 70;
-      --SB_ImageFrame_Width: 0.48cm;
+      --SB_ImageFrame_Border_Slice: 32;
+      --SB_ImageFrame_Border_Width: 0.48cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(218, 204, 160, 0.16), rgba(66, 59, 41, 0.4));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.22cm rgba(32, 27, 18, 0.5), 0 0 0.08cm rgba(171, 153, 101, 0.28);
     }
     
     &.death-4 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/stumpystrust-fantasy-ui-box/selected-transparent-center/boxSelect.png?raw=true');
-      --SB_ImageFrame_Slice: 34;
-      --SB_ImageFrame_Width: 0.52cm;
+      --SB_ImageFrame_Border_Slice: 28;
+      --SB_ImageFrame_Border_Width: 0.5cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(198, 131, 80, 0.16), rgba(70, 11, 30, 0.46));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.24cm rgba(35, 6, 19, 0.56), 0 0 0.09cm rgba(159, 69, 61, 0.34);
     }
     
     &.destruction-1 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/screaming-brain-portrait-frames/selected-transparent-center/wood-yellow-a.png?raw=true');
-      --SB_ImageFrame_Slice: 70;
-      --SB_ImageFrame_Width: 0.5cm;
+      --SB_ImageFrame_Border_Slice: 32;
+      --SB_ImageFrame_Border_Width: 0.5cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(165, 144, 55, 0.16), rgba(47, 62, 22, 0.44));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.22cm rgba(30, 42, 14, 0.54), 0 0 0.08cm rgba(143, 119, 43, 0.3);
     }
     
     &.destruction-2 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/system-g6-rpg-ui/selected-transparent-center/avatar-border-002.png?raw=true');
-      --SB_ImageFrame_Slice: 66;
-      --SB_ImageFrame_Width: 0.5cm;
+      --SB_ImageFrame_Border_Slice: 34;
+      --SB_ImageFrame_Border_Width: 0.46cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(211, 87, 34, 0.18), rgba(57, 17, 12, 0.5));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.24cm rgba(49, 13, 8, 0.56), 0 0 0.11cm rgba(184, 66, 29, 0.38);
     }
     
     &.destruction-3 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/shadow3097-window-frame/selected-transparent-center/window_green2.png?raw=true');
-      --SB_ImageFrame_Slice: 110;
-      --SB_ImageFrame_Width: 0.36cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Accent_Inset: -0.55cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(143, 132, 68, 0.14), rgba(30, 59, 30, 0.48));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.23cm rgba(17, 39, 19, 0.56), 0 0 0.08cm rgba(89, 121, 65, 0.3);
@@ -866,25 +886,25 @@
     
     &.destruction-4 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/zwonky-parchment-gui/selected-transparent-center/parchment-decorated.png?raw=true');
-      --SB_ImageFrame_Slice: 62;
-      --SB_ImageFrame_Width: 0.46cm;
+      --SB_ImageFrame_Border_Slice: 12;
+      --SB_ImageFrame_Border_Width: 0.42cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(190, 136, 72, 0.16), rgba(73, 45, 25, 0.46));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.22cm rgba(43, 27, 15, 0.54), 0 0 0.08cm rgba(153, 100, 56, 0.3);
     }
     
     &.destruction-5 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/screaming-brain-portrait-frames/selected-transparent-center/stone-purple-a.png?raw=true');
-      --SB_ImageFrame_Slice: 70;
-      --SB_ImageFrame_Width: 0.48cm;
+      --SB_ImageFrame_Border_Slice: 32;
+      --SB_ImageFrame_Border_Width: 0.48cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(146, 109, 68, 0.16), rgba(51, 29, 69, 0.48));
       --SB_ImageFrame_Shadow: 0 0.06cm 0.22cm rgba(30, 17, 43, 0.56), 0 0 0.09cm rgba(112, 70, 128, 0.34);
     }
     
     &.seraph-1 {
       --SB_ImageFrame_Source: url('https://github.com/Kirtanei/soulbound-styleguide/blob/main/graphics/image-frames/gargargarrick-blue-decorated-window/selected-transparent-center/blue-decorated-window.png?raw=true');
-      --SB_ImageFrame_Slice: 118 112 52 112;
-      --SB_ImageFrame_Width: 0.5cm;
-      --SB_ImageFrame_Outset: 0.12cm;
+      --SB_ImageFrame_Border_Source: none;
+      --SB_ImageFrame_Border_Width: 0;
+      --SB_ImageFrame_Overlay_Source: var(--SB_ImageFrame_Source);
       --SB_ImageFrame_Accent_Inset: -0.72cm;
       --SB_ImageFrame_Backdrop: linear-gradient(135deg, rgba(216, 194, 94, 0.2), rgba(12, 86, 83, 0.4));
       --SB_ImageFrame_Shadow: 0 0.07cm 0.24cm rgba(8, 63, 61, 0.52), 0 0 0.12cm rgba(190, 174, 83, 0.38);
